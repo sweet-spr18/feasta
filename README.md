@@ -24,6 +24,7 @@ Free-Food-Event Finder - Project for Software Engineering course Spring 2018
   * .edu verification
 * register to be a promoter
   * specify your role in the event
+  * specify your organization
 * save your preferences (favorite foods or dietary restrictions)
 * opt in for daily push notifications:
   * select a time to receive noti
