@@ -59,8 +59,18 @@ Free-Food-Event Finder - Project for Software Engineering course Spring 2018
 * in the Side Menu, click on "Change my Preferences" and get taken to a screen:
   * check boxes: Vegetarian, Pizza, Italian, Mexican, Asian, American, Donuts/Cookies/Bagels/Hot Chocolate
   * click Save or Cancel to get back to Side Menu
- 
- 
+* in the Side Menu, click on "Log out" and a message pops up asking "Are you sure you want to log out?"
+  * click "Yes" and get taken to the Sign Up/Log In screen
+  * click "No" and the message pop-up disappears
+* in the Side Menu, click on "About" and get taken to a new screen. This screen displays the following items:
+  * Rate Us - clicking on this brings up the app page on Apple App Store or Google Play Store
+  * Legal - clicking on this brings a new screen with the following items:
+    * Privacy
+    * Terms of Service
+    * Cookie Policy
+  * Help - clicking on this brings up a web-hosted documentation or FAQs, or brings up the default email app with our email address and email subject prefilled
+  * Acknowledgements - clicking on this displays brings up a screen with all the open source licenses (if we use any)
+  
 ### D-Requirements:
 
 
