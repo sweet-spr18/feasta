@@ -1,3 +1,5 @@
+![Feasta logo](https://github.com/sweet-spr18/feasta/blob/master/images/feasta-logo-dark.png "Feasta logo")
+
 # feasta
 Free-Food-Event Finder - Project for Software Engineering course Spring 2018
 
