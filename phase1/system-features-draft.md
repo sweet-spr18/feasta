@@ -2,26 +2,26 @@ We can all enter our interpretations of the features here and then synthesize th
 
 Chelsea & Thoa
 ## Sign up
-#### Description and Priority
+### Description and Priority
 The user will create an account with a valid stjohns.edu email. This is required to begin using FEASTA. They will receive a confirmation email when signed up successfully. Otherwise, if address is not valid, they will see an error message denying app access "You are not eligible to use this app. Must be a St. John's University student and must use a valid school address."
 
-#### Stimulus/Response Sequences
-  ##### Basic Data Flow
+### Stimulus/Response Sequences
+  #### Basic Data Flow
   * User opens the app. The landing page has two tabs: Log In and Sign Up.
   * User selects the Sign Up tab.
   * User enters their SJU email and creates a password, then clicks "Sign Up". 
   * User sees a confirmation screen saying "A confirmation email has been sent to you!" and receives a confirmation email.
   * User clicks the "Find me free food" button on the confirmation screen and is taken to the app's Home page.
-  ##### Alternative Data Flow 1
+  #### Alternative Data Flow 1
   * User enters a non-valid email address. Only existing stjohns.edu email addresses are accepted to use FEASTA.
   * User sees an error message saying "You are not eligible to use this app. Must be a St. John's University student and must use a valid school address"
   * User can tap outside this message and re-attempt a different email address.
-  ##### Alternative Data Flow 2
+  #### Alternative Data Flow 2
   * User enters an address associated with an existing FEASTA account.
   * User sees an error message saying "This account already exists. Please sign in instead."
   * User can tap outside this message and switch to the Log In tab.
   
-#### Functional Requirements
+### Functional Requirements
 > * REQ-1: There will be two tabs - Log In and Sign Up - when a user opens the newly-installded FEASTA app.
 > * REQ-2: The email address entered by the user will be verified to make sure it is an (1) existing and (2) stjohns.edu address.
 > * REQ-3: When the email address is valid, and is not associated with an existing FEASTA account, a new account in the system will be created for this user. A confirmation email is sent to user's inbox. The confirmation screen in the app will display the message "A confirmation email has been sent to you!" and a button "Find me free food" that will take user to the app's Home page.
