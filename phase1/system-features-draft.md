@@ -29,89 +29,114 @@ The user will create an account with a valid stjohns.edu email. This is required
 > * REQ-5: When the account already exists, the app will display "This account already exists. Please sign in instead." The message will disappear when the user taps outside of it.
   
  ## Log in
-#### Description and Priority
+### Description and Priority
   The user will log in with their verified email
 
-#### Stimulus/Response Sequences
-  User opens app,
-  enters verified email,
-  app opens to homepage with locations
+### Stimulus/Response Sequences
+ * User opens app,
+ * User enters verified email,
+ * App opens to homepage with locations
   
-  OR
+ #### OR
   
-  User opens app,
-  Home page since your log-in is remembered
+ * User opens app,
+ * Home page loads since user is already logged in from previous use
   
-#### Functional Requirements
+### Functional Requirements
   FEASTA must be downloaded and installed 
   User must enter .edu email  
-  
+    
  ## Browse by location
-#### Description and Priority
+### Description and Priority
   The user will select a building on campus to see events taking place there
   
-#### Stimulus/Response Sequences
-  User opens app,
-  app opens to homepage with locations
-  User clicks on the location they want
-  Feed of events appear for that place
+### Stimulus/Response Sequences
+ * User opens app,
+ * App opens to homepage with locations
+ * User taps on the location they want
+ * Feed of events appear for that location (only events taking place in that building)
   
-#### Functional Requirements
-    FEASTA must be downloaded and installed 
-    User must enter .edu email 
+### Functional Requirements
+    FEASTA must be downloaded and installed  
 
 ##  Search by keyword
 #### Description and Priority
   The user enters a food related word and results containing that word are returned
   
 #### Stimulus/Response Sequences
-  User opens app,
-  Clicks search icon on the left
-  Enters word into search box, clicks enter
-  All events mentioning that word appear
+ * User opens app,
+ * User taps search icon on the top
+ * User enters word into search box, clicks enter
+ * All events mentioning that word appear, if none exist, user will see "No results match your search"
   
 #### Functional Requirements
-    FEASTA must be downloaded and installed 
-    User must enter .edu email
+  *  FEASTA must be downloaded and installed 
     
  ## Select event
 #### Description and Priority
   The user selects an event to view from the search results or location listings
   
 #### Stimulus/Response Sequences
-  After searching or selecting location, user views a list of events
-  Click on one
-  New screen opens with all details of the event, additional photos (?) and comments
+ * After searching or selecting location, user views a list of events
+ * User selects one
+ * New screen opens with all details of the event, additional photos (?) and comments
   
 #### Functional Requirements
-    FEASTA must be downloaded and installed 
-    User must enter .edu email
+ * FEASTA must be downloaded and installed 
+ * There should be a back button to return to previous page.
     
  ## Edit event
 #### Description and Priority
   The user can edit an event that they posted
   
 #### Stimulus/Response Sequences
-  After selecting an event, screen with event details shows up 
-  Click on pencil icon on the left
-  Modify post
+ * After selecting an event, screen with event details shows up 
+ * Click on pencil icon on the left
+ * Modify post
   
 #### Functional Requirements
-    FEASTA must be downloaded and installed 
-    User must enter .edu email
+  *  FEASTA must be downloaded and installed 
+  *  User must be the one who posted the event
     
  ## Comment
 #### Description and Priority
   The user can give opinions or ask questions about an event
   
 #### Stimulus/Response Sequences
-  After selecting an event, screen with event details shows up 
-  Scroll down to see comments
-  Click "Start typing" below
-  Type comment
-  Click post
-  Comment immediately shows up under event
+ * After selecting an event, screen with event details shows up 
+ * Scroll down to see comments
+ * Click "Start typing" below
+ * Type comment
+ * Click "post"
+ * Comment immediately shows up under event
   
 #### Functional Requirements
-    FEASTA must be downloaded and installed 
-    User must enter .edu email
+   * FEASTA must be downloaded and installed 
+
+  ## Delete/Edit Comment
+#### Description and Priority
+  The user can delete a comment that they posted
+  
+#### Stimulus/Response Sequences
+ * After selecting an event, screen with event details shows up 
+ * Scroll down to see comments
+ * (NOT SURE HOW OUR UI WILL HANDLE THIS) Slide left to view delete and edit options
+ * Tap either delete which will remove the comment completely 
+ * OR tap edit which allows you to modify your text. 
+  
+#### Functional Requirements
+  * FEASTA must be downloaded and installed 
+ 
+  ## Delete/Edit Comment
+#### Description and Priority
+  The user can delete a comment that they posted
+  
+#### Stimulus/Response Sequences
+ * After selecting an event, screen with event details shows up 
+ * Scroll down to see comments
+ * (NOT SURE HOW OUR UI WILL HANDLE THIS) Slide left to view delete and edit options
+ * Tap either delete which will remove the comment completely 
+ * OR tap edit which allows you to modify your text. 
+  
+#### Functional Requirements
+  * FEASTA must be downloaded and installed 
