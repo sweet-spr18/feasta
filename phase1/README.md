@@ -44,8 +44,7 @@
     * diners' ratings (5 star scale), 
     * all comments
   * leave either a comment or a rating or both **- more advanced: can the user delete a comment?**
-  * bookmark as Favorite to receive a noti later (e.g. when you are browsing at noon and want to plan for dinner) **- new function: send a reminder notification 30 mins before the event's start time*
-  * (want it or not?) contact the org **- new function: when the promoter is writing a new event post, there is a Toggle to enable/disable "Diners can contact me"**
+  * bookmark as Favorite to receive a noti later (e.g. when you are browsing at noon and want to plan for dinner) **- new function: send a reminder notification 30 mins before the event's start time**
   * click Back to go back to the previous screen
 * on Home page, click on the Hamburger button to open the Side Menu
 * in the Side Menu, click on "Post an Event": **- advanced functions (don't know where to put it yet) create duplicate events, create repeating events, delete an event (do we allow these?)**
