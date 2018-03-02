@@ -1,7 +1,7 @@
 We can all enter our interpretations of the features here and then synthesize them for the final document. 
 
 Chelsea & Thoa
-## Diner's sign up 
+## 1. Sign up (Diners only)
 ### Description and Priority
 The diner-user will create an account with a valid stjohns.edu email. This is required to begin using FEASTA. They will receive a confirmation email when signed up successfully. Otherwise, if address is not valid, they will see an error message denying app access "You are not eligible to use this app. Must be a St. John's University student and must use a valid school address."
 
@@ -28,7 +28,7 @@ The diner-user will create an account with a valid stjohns.edu email. This is re
 > * REQ-4: When the email address entered is not valid, the app will display an error message "You are not eligible to use this app. Must be a St. John's University student and must use a valid school address". The message will disappear when the user taps outside of it.
 > * REQ-5: When the account already exists, the app will display "This account already exists. Please sign in instead." The message will disappear when the user taps outside of it.
   
-## Log in
+## 2. Log in
 ### Description and Priority
 The user will log in with their registered email address and correct password. Log-in will be remembered for the next app launches.
 
@@ -46,7 +46,7 @@ The user will log in with their registered email address and correct password. L
 > * REQ-6: On the Log In tab, when the correct credentials are entered, the app will take the user to the Home page.
 > * REQ-7: On the Log In tab, when the incorrect credentials are entered, the app will display the message "Incorrect email or password.", erase both email and password fields and let the user re-attempt as many times as they want.
  
-## Log out
+## 3. Log out
 ### Description and Priority
 While logged in, the user can log out of the app anytime by opening the Navigation Menu and selecting the "Log Out" option. A message pop-up will ask user to confirm their action before actually logging them out.
 
@@ -59,11 +59,11 @@ While logged in, the user can log out of the app anytime by opening the Navigati
   * User clicks "No" and the message pop-up disappears. User lands back at the Navigation Menu.
 
 ### Functional Requirements
-> * REQ-8: The Navigation Menu has the "Log Out" option.
+> * REQ-8: The Navigation Menu has the following options: "Log Out", "Post an Event" (only visible to promoter's accounts).
 > * REQ-9: Before the user logs out, a message pop-up will ask the user to confirm their action "Are you sure you want to log out?" This pop-up has two clickable buttons "Yes" and "No"
 > * REQ-10: When user confirms their log out action, they are taken to the Sign Up/Log In screen.
 
-## Browse events by location
+## 4. Browse events by location
 ### Description and Priority
 From the Home page, the user selects a building on campus to see events taking place there.
   
@@ -79,7 +79,7 @@ From the Home page, the user selects a building on campus to see events taking p
 > * REQ-12: Tapping on one of the locations takes the user to the event feed. User can click Back to go back to the Home page.
 > * REQ-13: The event list always displays events up to 11:59pm that day, sorted by time (most imminent first). Each entry in the list includes a thumbnail of the food image, the Event Name (most prominent info), time (start and end), room number, and diners' ratings (5 star scale). 
 
-## Search for events by food-related keyword
+## 5. Search for events by food-related keyword
 ### Description and Priority
 From either the Home page or the Per-Location Event Feed, the user can tap the Search Icon, type in a food-related keyword, and results containing that word are returned.
   
@@ -95,7 +95,7 @@ From either the Home page or the Per-Location Event Feed, the user can tap the S
 > * REQ-15: Search results are conducted based on scope. That means, if the user is searching from Home page, all locations are searched. Otherwise, search is limited to the Location the user is currently at.
 > * REQ-16: Search will always inform user of the number of results returned (e.g. "3 events found" or "0 event found").
 
-## Select an event to view details
+## 6. Select an event to view details
 ### Description and Priority
 The user taps an event from either the per-location feed or search results to view. The user can always click Back to go back to the list.
   
@@ -103,19 +103,20 @@ The user taps an event from either the per-location feed or search results to vi
   #### Basic Data Flow
  * From either the per-location feed or search results, user taps an event to view.
  * A new screen opens with all details of the event: Event Name (most prominent), organization name, time (start and end), room number, food type(s) and food image(s), diners' ratings (5 star scale) and comments.
- * If the user is using a promoter's account, they will see a Pencil symbol that they can click to get to the Event Editable form.
+ * If the user is the promoter of that event, they will see a Pencil symbol that they can click to get to the Event Editable form.
  * User can leave a comment, a rating, or both. User can delete their comment(s).
  * User can bookmark the event as Favorite to review a notification later. 
  * User clicks Back to go back to the previous screen.
   
 ### Functional Requirements
-> * REQ-17: An Event Detail screen will display the Event Name (most prominent), organization name, time (start and end), room number, food type(s) and food image(s), diners' ratings (5 star scale) and comments. If the user is using a promoter's account, the Pencil symbol is visible. The Bookmark symbol is always visible, and displayed as bookmarked or not bookmarked. 
+> * REQ-17: An Event Detail screen will display the Event Name (most prominent), organization name, time (start and end), room number, food type(s) and food image(s), diners' ratings (5 star scale) and comments. If the user is the promoter of that event, the Pencil symbol is visible. The Bookmark symbol is always visible, and displayed as bookmarked or not bookmarked. 
 
-## Leave a comment
+## 7. Leave a comment
 ### Description and Priority
 From the Event Detail screen, the user can give opinions or ask questions about an event.
   
 ### Stimulus/Response Sequences
+  #### Basic Data Flow
  * After user selects an event, the screen with event details shows up. 
  * User scroll downs to see all comments, if any.
  * User clicks "Start typing" below.
@@ -125,32 +126,75 @@ From the Event Detail screen, the user can give opinions or ask questions about 
 ### Functional Requirements
 > * REQ-18: The clickable "Start typing" box is located below all comments (if any). When user clicks on it, they can start typing and clicks "Post" after done.
 
-## Delete/Edit a comment
+## 8. Delete/Edit a comment
 ### Description and Priority
 The user can delete or edit a comment that they posted.
   
-#### Stimulus/Response Sequences
+### Stimulus/Response Sequences
+  #### Basic Data Flow
  * After user selects an event, the screen with event details shows up. 
  * User scroll downs to see all comments.
  * At their comment, user slides left to view the Delete and Edit options.
  * Taping Delete will remove the comment immediately. 
  * Tapping Edit will allows user to type. User clicks "Post" after done typing to update the comment. Comment's timestamp is kept as orginal. 
   
-#### Functional Requirements
+### Functional Requirements
 > * REQ-19: At their comment, user can slide left to view Delete and Edit options. Taping Delete will remove the comment immediately. Tapping Edit will allows user to type. User clicks "Post" after done typing to update the comment. Comment's timestamp is kept as orginal. 
   
- ## Edit event
-#### Description and Priority
-  The user can edit an event that they posted
+## Post/Edit an event (Promoters only)
+### Description and Priority
+The promoter-user can post and edit an event that they posted. 
   
-#### Stimulus/Response Sequences
- * After selecting an event, screen with event details shows up 
- * Click on pencil icon on the left
- * Modify post
+### Stimulus/Response Sequences
+  #### Basic Data Flow
+ * User opens the Navigation Menu and selects "Post an Event"
+ * A new screen opens, asking user to select a Location
+ * After user chooses a location, a new screen opens with the Editable form where user will:
+    * type in event details: event name, datetime (start and end), event discription
+    * check boxes for food type(s): Pizza, Italian, Mexican, Asian, American, Donuts/Cookies/Bagels/Hot Chocolate
+    * turn on/off the Vegetarian toggle
+    * post or select 1 food photo, including a 1-3 word description. Photo can be taken on the spot, or chosen the Gallery's app on user's device, or chosen from our app's built-in gallery.
+    * click "Publish" and get taken to the Event Detail screen, or click "Cancel" to dismiss their action.
+  #### Alternative Data Flow
+ * Inside an Event Detail screen of an event they created, user clicks on the Pencil symbol.
+ * The Editable form opens, allowing user to modify their post.
+ * User clicks "Publish" to save the changes, or click "Cancel" to dimiss their action.
   
-#### Functional Requirements
-  *  FEASTA must be downloaded and installed 
-  *  User must be the one who posted the event
+### Functional Requirements
+> * REQ-8: The Navigation Menu has the following options: "Log Out", "Post an Event" (only visible to promoter's accounts).
+> * REQ-20: When the user wants to post an event, the first screen will ask for the location. The next screen is an Editable form where user can type in event details (event name, start and end datetime, event discription), check boxes for food type(s) (Pizza, Italian, Mexican, Asian, American, Donuts/Cookies/Bagels/Hot Chocolate), turn on/off the Vegetarian toggle, post or select 1 food photo, including a 1-3 word description. Photo can be taken on the spot, or chosen the Gallery's app on user's device, or chosen from our app's built-in gallery. After done, user can click "Publish" and get taken to the Event Detail screen, or click "Cancel" to dismiss their action.
+> * REQ-21: Clicking on the Pencil symbol will open the Event Editable form.
     
+## View event analytics
+### Description and Policy
 
- 
+
+### Stimulus/Response Sequences
+  #### Basic Data Flow
+  #### Alternative Data Flow
+
+### Functional Requirements
+
+## Be notified of bookmark events
+### Description and Policy
+
+### Stimulus/Response Sequences
+  #### Basic Data Flow
+  
+### Functional Requirements
+
+## Set dining preferences
+### Description and Policy
+
+### Stimulus/Response Sequences
+  #### Basic Data Flow
+
+### Functional Requirements
+
+## Access help
+### Description and Policy
+
+### Stimulus/Response Sequences
+  #### Basic Data Flow
+  
+### Functional Requirements
