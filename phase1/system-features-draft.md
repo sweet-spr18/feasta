@@ -77,7 +77,7 @@ From the Home page, the user selects a building on campus to see events taking p
 ### Functional Requirements
 > * REQ-11: The Home page displays names of buildings on campus. These names are tappable.  
 > * REQ-12: Tapping on one of the locations takes the user to the event feed. User can click Back to go back to the Home page.
-> * REQ-13: The event list always displays events up to 11:59pm that day, sorted by time (most imminent first).
+> * REQ-13: The event list always displays events up to 11:59pm that day, sorted by time (most imminent first). Each entry in the list includes a thumbnail of the food image, the Event Name (most prominent info), time (start and end), room number, and diners' ratings (5 star scale). 
 
 ## Search for events by food-related keyword
 ### Description and Priority
@@ -90,24 +90,55 @@ From either the Home page or the Per-Location Event Feed, the user can tap the S
  * Scope-based search results are returned. That means, if the user is searching from Home page, all locations are searched. Otherwise, search is limited to the Location the user is currently at.
   
 ### Functional Requirements
-> * REQ-13: The event list always displays events up to 11:59pm that day, sorted by time (most imminent first).
+> * REQ-13: The event list always displays events up to 11:59pm that day, sorted by time (most imminent first). Each entry in the list includes a thumbnail of the food image, the Event Name (most prominent info), time (start and end), room number, and diners' ratings (5 star scale). 
 > * REQ-14: The Search Icon is visible from anywhere in the app: whether the user is on the Home page or inside the Per-Location Event Feed.
 > * REQ-15: Search results are conducted based on scope. That means, if the user is searching from Home page, all locations are searched. Otherwise, search is limited to the Location the user is currently at.
 > * REQ-16: Search will always inform user of the number of results returned (e.g. "3 events found" or "0 event found").
-    
- ## Select event
-#### Description and Priority
-  The user selects an event to view from the search results or location listings
+
+## Select an event to view details
+### Description and Priority
+The user taps an event from either the per-location feed or search results to view. The user can always click Back to go back to the list.
+  
+### Stimulus/Response Sequences
+  #### Basic Data Flow
+ * From either the per-location feed or search results, user taps an event to view.
+ * A new screen opens with all details of the event: Event Name (most prominent), organization name, time (start and end), room number, food type(s) and food image(s), diners' ratings (5 star scale) and comments.
+ * If the user is using a promoter's account, they will see a Pencil symbol that they can click to get to the Event Editable form.
+ * User can leave a comment, a rating, or both. User can delete their comment(s).
+ * User can bookmark the event as Favorite to review a notification later. 
+ * User clicks Back to go back to the previous screen.
+  
+### Functional Requirements
+> * REQ-17: An Event Detail screen will display the Event Name (most prominent), organization name, time (start and end), room number, food type(s) and food image(s), diners' ratings (5 star scale) and comments. If the user is using a promoter's account, the Pencil symbol is visible. The Bookmark symbol is always visible, and displayed as bookmarked or not bookmarked. 
+
+## Leave a comment
+### Description and Priority
+From the Event Detail screen, the user can give opinions or ask questions about an event.
+  
+### Stimulus/Response Sequences
+ * After user selects an event, the screen with event details shows up. 
+ * User scroll downs to see all comments, if any.
+ * User clicks "Start typing" below.
+ * User types comment and clicks "Post" after done.
+ * Comment immediately shows up under event.
+  
+### Functional Requirements
+> * REQ-18: The clickable "Start typing" box is located below all comments (if any). When user clicks on it, they can start typing and clicks "Post" after done.
+
+## Delete/Edit a comment
+### Description and Priority
+The user can delete or edit a comment that they posted.
   
 #### Stimulus/Response Sequences
- * After searching or selecting location, user views a list of events
- * User selects one
- * New screen opens with all details of the event, additional photos (?) and comments
+ * After user selects an event, the screen with event details shows up. 
+ * User scroll downs to see all comments.
+ * At their comment, user slides left to view the Delete and Edit options.
+ * Taping Delete will remove the comment immediately. 
+ * Tapping Edit will allows user to type. User clicks "Post" after done typing to update the comment. Comment's timestamp is kept as orginal. 
   
 #### Functional Requirements
- * FEASTA must be downloaded and installed 
- * There should be a back button to return to previous page.
-    
+> * REQ-19: At their comment, user can slide left to view Delete and Edit options. Taping Delete will remove the comment immediately. Tapping Edit will allows user to type. User clicks "Post" after done typing to update the comment. Comment's timestamp is kept as orginal. 
+  
  ## Edit event
 #### Description and Priority
   The user can edit an event that they posted
@@ -121,45 +152,5 @@ From either the Home page or the Per-Location Event Feed, the user can tap the S
   *  FEASTA must be downloaded and installed 
   *  User must be the one who posted the event
     
- ## Comment
-#### Description and Priority
-  The user can give opinions or ask questions about an event
-  
-#### Stimulus/Response Sequences
- * After selecting an event, screen with event details shows up 
- * Scroll down to see comments
- * Click "Start typing" below
- * Type comment
- * Click "post"
- * Comment immediately shows up under event
-  
-#### Functional Requirements
-   * FEASTA must be downloaded and installed 
 
-  ## Delete/Edit Comment
-#### Description and Priority
-  The user can delete a comment that they posted
-  
-#### Stimulus/Response Sequences
- * After selecting an event, screen with event details shows up 
- * Scroll down to see comments
- * (NOT SURE HOW OUR UI WILL HANDLE THIS) Slide left to view delete and edit options
- * Tap either delete which will remove the comment completely 
- * OR tap edit which allows you to modify your text. 
-  
-#### Functional Requirements
-  * FEASTA must be downloaded and installed 
  
-  ## Delete/Edit Comment
-#### Description and Priority
-  The user can delete a comment that they posted
-  
-#### Stimulus/Response Sequences
- * After selecting an event, screen with event details shows up 
- * Scroll down to see comments
- * (NOT SURE HOW OUR UI WILL HANDLE THIS) Slide left to view delete and edit options
- * Tap either delete which will remove the comment completely 
- * OR tap edit which allows you to modify your text. 
-  
-#### Functional Requirements
-  * FEASTA must be downloaded and installed 
