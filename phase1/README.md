@@ -19,9 +19,9 @@
     (3) the next screen is a Confirmation screen and the user can click OK to go back to the log-in screen, an email is also sent to confirm this action)**
 * browse Locations on the Home page
 * on Home page, click on one Location and get taken to a list of event entries + a search box on top
-  * **this Per-Location list lists events for: WHICH ONE SHOULD WE CHOOSE
-    * either: today, tomorrow, (and 3 days from now?)
-    * or: within 24 hours from now**
+  * **this Per-Location list lists events for: WHICH ONE SHOULD WE CHOOSE**
+    * **either: today, tomorrow, (and 3 days from now?)**
+    * **or: within 24 hours from now**
   * click Back to go back to Home page
 * enter a food keyword into the search box and click Enter:
   * search results are displayed as in a list, with the number of results returned (e.g. "3 events found")
@@ -35,7 +35,6 @@
 * click on an event entry and get taken to a new screen (or do we want a pop-up window?) displaying everything about that event: - **non-functional requirement: display info such that users don’t have to scroll / click “Read more” (want this or not?)**
   * see Event Name (most prominent info)
   * (if you are the host) see a Pencil symbol that you can click on to get to the event Editable form 
-  * (want it or not? If we do allow sharing about a particular event, what will we be sharing: a URL? A summary of Event Name-Place-Time-Food?) see a Share button (i.e. an arrow symbol) **– new function: the Share button will hook up with other communication apps existing on the user’s device (e.g. Texting, Messenger, Slack, Gmail, Facebook, Copy to clipboard, etc.)**
   * see other details: 
     * org name, 
     * time (start & end), **- - maybe the time stamp will hook up with the Calendar app on the user’s device and display how this event will fit into their schedule – similar to Gmail or Doodle**
@@ -47,7 +46,7 @@
   * bookmark as Favorite to receive a noti later (e.g. when you are browsing at noon and want to plan for dinner) **- new function: send a reminder notification 30 mins before the event's start time**
   * click Back to go back to the previous screen
 * on Home page, click on the Hamburger button to open the Side Menu
-* in the Side Menu, click on "Post an Event": **- advanced functions (don't know where to put it yet) create duplicate events, create repeating events, delete an event (do we allow these?)**
+* in the Side Menu, click on "Post an Event": **- advanced functions (don't know where to put it yet) delete an event - do we allow these?**
   * a new screen opens, asking you to select a Location
   * a new screen opens with the Editable form where you:
     * type in event details: name, datetime (start & end), event description
