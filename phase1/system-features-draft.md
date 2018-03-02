@@ -141,7 +141,7 @@ The user can delete or edit a comment that they posted.
 ### Functional Requirements
 > * REQ-19: At their comment, user can slide left to view Delete and Edit options. Taping Delete will remove the comment immediately. Tapping Edit will allows user to type. User clicks "Post" after done typing to update the comment. Comment's timestamp is kept as orginal. 
   
-## Post/Edit an event (Promoters only)
+## 9. Post/Edit an event (Promoters only)
 ### Description and Priority
 The promoter-user can post and edit an event that they posted. 
   
@@ -165,7 +165,7 @@ The promoter-user can post and edit an event that they posted.
 > * REQ-20: When the user wants to post an event, the first screen will ask for the location. The next screen is an Editable form where user can type in event details (event name, start and end datetime, event discription), check boxes for food type(s) (Pizza, Italian, Mexican, Asian, American, Donuts/Cookies/Bagels/Hot Chocolate), turn on/off the Vegetarian toggle, post or select 1 food photo, including a 1-3 word description. Photo can be taken on the spot, or chosen the Gallery's app on user's device, or chosen from our app's built-in gallery. After done, user can click "Publish" and get taken to the Event Detail screen, or click "Cancel" to dismiss their action.
 > * REQ-21: Clicking on the Pencil symbol will open the Event Editable form.
     
-## View event analytics
+## 10. View event analytics
 ### Description and Policy
 Promoter-users can have posted more than 5 events can view analytics.
 
@@ -186,7 +186,7 @@ Promoter-users can have posted more than 5 events can view analytics.
 > * REQ-8: The Navigation Menu has the following options: "Set My Preferences", "Log Out", "About", "Post an Event", "View Analytics" (the last two options are only visible to promoter's accounts).
 > * REQ-22: If the user has posted more than 5 events, they will be able to see the charts of past events, showing aggregate event ratings by location, time, and food type. Otherwise, they will see the message pop-up "Analytics is only available if you have hosted more than 5 events." They can click Back or tap outside the message to dismiss it.
 
-## Be notified of bookmark events
+## 11. Be notified of bookmark events
 ### Description and Policy
 If the user has bookmarked an event before, the app will notified them 30 minutes before the event's start time.
 
@@ -198,7 +198,7 @@ If the user has bookmarked an event before, the app will notified them 30 minute
 ### Functional Requirements
 > * REQ-23: The app keeps track of user's bookmarks and sends a notificatoin to the user's phone system 30 minutes before the event's start time. When the user taps on the notification, the app will bring up the Event Detail page.
 
-## Set dining preferences
+## 12. Set dining preferences
 ### Description and Policy
 The user can set their dining preferences, which will dictate the future feeds that display to them.
 
@@ -212,7 +212,7 @@ The user can set their dining preferences, which will dictate the future feeds t
 > * REQ-8: The Navigation Menu has the following options: "Set My Preferences", "Log Out", "About", "Post an Event", "View Analytics" (the last two options are only visible to promoter's accounts).
 > * REQ-24: The preference setting screen has check boxes for user to opt in/out: Vegetarian, Pizza, Italian, Mexican, Asian, American, Donuts/Cookies/Bagels/Hot Chocolate. User can click "Save" to save or "Cancel" dismiss their action. Either way, they will be brought back to the Navigation Menu.
 
-## Access help
+## 13. Access help
 ### Description and Policy
 The user can rate the app, learn more about the app, or get help via an FAQs or direct email to the SWEET team.
 
