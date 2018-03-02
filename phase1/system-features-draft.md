@@ -59,7 +59,7 @@ While logged in, the user can log out of the app anytime by opening the Navigati
   * User clicks "No" and the message pop-up disappears. User lands back at the Navigation Menu.
 
 ### Functional Requirements
-> * REQ-8: The Navigation Menu has the following options: "Log Out", "Post an Event" (only visible to promoter's accounts).
+> * REQ-8: The Navigation Menu has the following options: "Set My Preferences", "Log Out", "About", "Post an Event", "View Analytics" (the last two options are only visible to promoter's accounts).
 > * REQ-9: Before the user logs out, a message pop-up will ask the user to confirm their action "Are you sure you want to log out?" This pop-up has two clickable buttons "Yes" and "No"
 > * REQ-10: When user confirms their log out action, they are taken to the Sign Up/Log In screen.
 
@@ -161,40 +161,73 @@ The promoter-user can post and edit an event that they posted.
  * User clicks "Publish" to save the changes, or click "Cancel" to dimiss their action.
   
 ### Functional Requirements
-> * REQ-8: The Navigation Menu has the following options: "Log Out", "Post an Event" (only visible to promoter's accounts).
+> * REQ-8: The Navigation Menu has the following options: "Set My Preferences", "Log Out", "About", "Post an Event", "View Analytics" (the last two options are only visible to promoter's accounts).
 > * REQ-20: When the user wants to post an event, the first screen will ask for the location. The next screen is an Editable form where user can type in event details (event name, start and end datetime, event discription), check boxes for food type(s) (Pizza, Italian, Mexican, Asian, American, Donuts/Cookies/Bagels/Hot Chocolate), turn on/off the Vegetarian toggle, post or select 1 food photo, including a 1-3 word description. Photo can be taken on the spot, or chosen the Gallery's app on user's device, or chosen from our app's built-in gallery. After done, user can click "Publish" and get taken to the Event Detail screen, or click "Cancel" to dismiss their action.
 > * REQ-21: Clicking on the Pencil symbol will open the Event Editable form.
     
 ## View event analytics
 ### Description and Policy
-
+Promoter-users can have posted more than 5 events can view analytics.
 
 ### Stimulus/Response Sequences
   #### Basic Data Flow
+  * User opens to Navigation Menu and selects "View Analytics"
+  * A new screen opens showing the charts of past events:
+    * aggregate event ratings by location
+    * aggregate event ratings by time
+    * aggregate event ratings by food type
+   * User clicks Back to go back to the previous screen
   #### Alternative Data Flow
+  * User opens to Navigation Menu and selects "View Analytics". 
+  * Since this user has posted only 5 events or fewer, they will see the message pop-up "Analytics is only available if you have hosted more than 5 events"
+  * The user clicks Back or taps outside the message to dismiss it.
 
 ### Functional Requirements
+> * REQ-8: The Navigation Menu has the following options: "Set My Preferences", "Log Out", "About", "Post an Event", "View Analytics" (the last two options are only visible to promoter's accounts).
+> * REQ-22: If the user has posted more than 5 events, they will be able to see the charts of past events, showing aggregate event ratings by location, time, and food type. Otherwise, they will see the message pop-up "Analytics is only available if you have hosted more than 5 events." They can click Back or tap outside the message to dismiss it.
 
 ## Be notified of bookmark events
 ### Description and Policy
+If the user has bookmarked an event before, the app will notified them 30 minutes before the event's start time.
 
 ### Stimulus/Response Sequences
   #### Basic Data Flow
+  * 30 minutes before the event's start time, the app sends a notification to the user's phone system.
+  * Depending on the device, user swipes up or down to view the notification. When they tap it, the app will bring up the Event Detail page. 
   
 ### Functional Requirements
+> * REQ-23: The app keeps track of user's bookmarks and sends a notificatoin to the user's phone system 30 minutes before the event's start time. When the user taps on the notification, the app will bring up the Event Detail page.
 
 ## Set dining preferences
 ### Description and Policy
+The user can set their dining preferences, which will dictate the future feeds that display to them.
 
 ### Stimulus/Response Sequences
   #### Basic Data Flow
+  * User opens the Navigation Menu and selects "Set My Preferences".
+  * A new screen opens, where user can check boxes: Vegetarian, Pizza, Italian, Mexican, Asian, American, Donuts/Cookies/Bagels/Hot Chocolate.
+  * User clicks "Save" to save or "Cancel" dismiss their action. Either way, they will be brought back to the Navigation Menu.
 
 ### Functional Requirements
+> * REQ-8: The Navigation Menu has the following options: "Set My Preferences", "Log Out", "About", "Post an Event", "View Analytics" (the last two options are only visible to promoter's accounts).
+> * REQ-24: The preference setting screen has check boxes for user to opt in/out: Vegetarian, Pizza, Italian, Mexican, Asian, American, Donuts/Cookies/Bagels/Hot Chocolate. User can click "Save" to save or "Cancel" dismiss their action. Either way, they will be brought back to the Navigation Menu.
 
 ## Access help
 ### Description and Policy
+The user can rate the app, learn more about the app, or get help via an FAQs or direct email to the SWEET team.
 
 ### Stimulus/Response Sequences
   #### Basic Data Flow
-  
+  * User opens the Navigation Menu and selects "About".
+  * The new screen has the following items:
+    * Rate Us - clicking on this brings up the app page on Apple App Store or Google Play Store
+    * Legal - clicking on this brings a new screen with the following items:
+      * Privacy
+      * Terms of Service
+      * Cookie Policy
+    * Help - clicking on this brings up a web-hosted documentation or FAQs, or brings up the default email app with SWEET's email address and email subject prefilled
+    * Acknowledgements - clicking on this displays brings up a screen with all the open source licenses (if the SWEET team use any)
+    
 ### Functional Requirements
+> * REQ-8: The Navigation Menu has the following options: "Set My Preferences", "Log Out", "About", "Post an Event", "View Analytics" (the last two options are only visible to promoter's accounts).
+> * REQ-25: Nested under "About" are Rate Us, Legal, Help, and Acknowledgements. Clicking on Rate Us will bring up the app page on Apple App Store or Google Play Store. Clicking on Legal will display Privacy, Terms of Service, and Cookie Policy documents. Clicking on Help will bring up a web-hosted FAQs, or bring up the default email app with SWEET's email address and email subject prefilled. Clicking on Acknowledgements will bring up a screen with all the open source licenses (if the SWEET team use any).
