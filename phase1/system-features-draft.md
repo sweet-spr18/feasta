@@ -1,9 +1,11 @@
 We can all enter our interpretations of the features here and then synthesize them for the final document. 
 
 Chelsea & Thoa
-## 1. Sign up (Diners only)
+## 1. Sign up
 ### Description and Priority
 The diner-user will create an account with a valid stjohns.edu email. This is required to begin using FEASTA. They will receive a confirmation email when signed up successfully. Otherwise, if address is not valid, they will see an error message denying app access "You are not eligible to use this app. Must be a St. John's University student and must use a valid school address."
+
+Alternatively, if the user is from an organization wanting to post about their events, they will sign up for a promoter account. They will provide an email address that will be verified by the SWEET team to make sure it is truly an organization's email address, and will receive login credentials created by SWEET. If SWEET are unable to verify that it is a legitimate organization, they will be informed and the account registration won't be completed.
 
 ### Stimulus/Response Sequences
   #### Basic Data Flow
@@ -17,41 +19,24 @@ The diner-user will create an account with a valid stjohns.edu email. This is re
   * User sees an error message saying "You are not eligible to use this app. Must be a St. John's University student and must use a valid school address"
   * User can tap outside this message and re-attempt a different email address.
   #### Alternative Data Flow 2
-  * User enters an address associated with an existing FEASTA account.
+  * From the Sign Up tab, the user clicks on the button ""If you're an organizer, click here."
+  * User enters their organization's email and taps "Send to SWEET" 
+  * User sees a request pending screen saying "We are verifying your information. A confirmation email will be sent to \[org-name@some-mail.com] within 24 hours with your login credentials." 
+  * After the email is verified, the organization will receive an email with a link that says "Start posting".
+  * Clicking the link will take them to the app's Post an Event screen.
+  #### Alternative Data Flow 3
+  * If the email address cannot be verified to represent a legitimate organization at St. John's, an email will be sent to that address saying "We were unable to verify your information."
+  #### Alternative Data Flow 4
+  * User (either diner or promoter) enters an address associated with an existing FEASTA account.
   * User sees an error message saying "This account already exists. Please sign in instead."
   * User can tap outside this message and switch to the Log In tab.
   
 ### Functional Requirements
-> * REQ-1: There will be two tabs - Log In (default tab) and Sign Up - when a user opens the newly-installded FEASTA app.
-> * REQ-2: The email address entered by the user will be verified to make sure it is an (1) existing and (2) stjohns.edu address.
-> * REQ-3: When the email address is valid, and is not associated with an existing FEASTA account, a new account in the system will be created for this user. A confirmation email is sent to user's inbox. The confirmation screen in the app will display the message "A confirmation email has been sent to you!" and a button "Find me free food" that will take user to the app's Home page.
-> * REQ-4: When the email address entered is not valid, the app will display an error message "You are not eligible to use this app. Must be a St. John's University student and must use a valid school address". The message will disappear when the user taps outside of it.
-> * REQ-5: When the account already exists, the app will display "This account already exists. Please sign in instead." The message will disappear when the user taps outside of it.
- 
- ## 2. Sign up (Promoters)
-### Description and Priority
-
-An organization will need an account with which they can post events, not only view them. They will contact us requesting this account, we will verify, set it up and return their login information to them. If we are unable to verify that it is a legitimate organization they will be informed and the account won't be completed.
-
-### Stimulus/Response Sequences
-  #### Basic Data Flow
-  * User opens the app. The landing page has two tabs: Log In (default tab) and Sign Up.
-  * User selects the Sign Up tab, which then has a button saying "If you're an organizer, click here."
-  * User selects the organizer button.
-  * User enters their organization's email and taps "Send to SWEET" 
-  * User sees a request pending screen saying "We are verifying your information, you will receive confirmation shortly" 
-  * After the email is verified, the organization will receive an email with a link that says "Start posting"
-  * Clicking the link will take them to the app's create a post page
-  #### Alternative Data Flow 1
-  * User enters a non-valid organization address. Only verified organizations are accepted to use FEASTA.
-  * User sees a request pending screen saying "We are verifying your information, you will receive confirmation shortly" 
-  * If the email cannot be verified, the organization will receive an email saying "We were unable to verify your information"
-  
-### Functional Requirements
-> * REQ-1: There will be two tabs - Log In (default tab) and Sign Up - when a user opens the newly-installded FEASTA app.
-> * REQ-2: The email address entered by the user will be verified to make sure it is an existing organization at St.John's.
-> * REQ-3: When the email address is verified, a new promoter account in the system will be created for this user. A confirmation email is sent to user's inbox with the link that allows them to start posting.
-> * REQ-4: When the email address entered is not valid, the email will simply say "We were unable to verify your information".
+> * REQ-1: There will be two tabs - Log In (default tab) and Sign Up - when a user opens the newly-installded FEASTA app. (a) The Sign Up tab will have fields for user to enter an SJU email address and a password to create a diner account. (b) Otherwise, in the Sign Up tab, there will be a button saying "If you're an organizer, click here." When the promoter-user clicks on this button, they can enter an organization's email address and tap "Send to SWEET". After they click send, they will see a request pending screen saying "We are verifying your information. A confirmation email will be sent to \[org-name@some-mail.com] within 24 hours with your login credentials." 
+> * REQ-2: (a) For diner-users, the email address they enter will be verified to make sure it is an (1) existing and (2) stjohns.edu address. (b) For promoter-user, the email address they enter will be verified to make sure it is an existing organization at St.John's.
+> * REQ-3: When the email address is valid, and is not associated with an existing FEASTA account, a new account in the system will be created for this user. A confirmation email is sent to user's inbox. (a) For diner-users, the confirmation screen in the app will display the message "A confirmation email has been sent to you!" and a button "Find me free food" that will take user to the app's Home page. (b) For promoter-users, the confirmation email will contain the login credentials and a link saying "Start posting" that will take them to the app's Post an Event screen.
+> * REQ-4: When the email address entered is not valid, (a) for diner-users, the app will display an error message "You are not eligible to use this app. Must be a St. John's University student and must use a valid school address". The message will disappear when the user taps outside of it. (b) For promoter-users, an email will be sent to the provided address saying "We were unable to verify your information."
+> * REQ-5: If the account already exists, the app will display "This account already exists. Please sign in instead." The message will disappear when the user taps outside of it.
  
 ## 2. Log in
 ### Description and Priority
@@ -67,7 +52,7 @@ The user will log in with their registered email address and correct password. L
  * User can attempt as many times as they want.
   
 ### Functional Requirements
-> * REQ-1: There will be two tabs - Log In (default tab) and Sign Up - when a user opens the newly-installded FEASTA app.
+> * REQ-1: There will be two tabs - Log In (default tab) and Sign Up - when a user opens the newly-installded FEASTA app. (a) The Sign Up tab will have fields for user to enter an SJU email address and a password to create a diner account. (b) Otherwise, in the Sign Up tab, there will be a button saying "If you're an organizer, click here." When the promoter-user clicks on this button, they can enter an organization's email address and tap "Send to SWEET". After they click send, they will see a request pending screen saying "We are verifying your information. A confirmation email will be sent to \[org-name@some-mail.com] within 24 hours with your login credentials."
 > * REQ-6: On the Log In tab, when the correct credentials are entered, the app will take the user to the Home page.
 > * REQ-7: On the Log In tab, when the incorrect credentials are entered, the app will display the message "Incorrect email or password.", erase both email and password fields and let the user re-attempt as many times as they want.
  
