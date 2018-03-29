@@ -18,3 +18,14 @@ You will also need to work on three UML diagrams:
 What you need to turn in:
 1. Revised Phase I report
 2. The Phase II report
+
+(Thoa) I think our Phase 2 Report will include:
+  * A pdf version of the Classes and Methods word doc.
+  * Diagrams:
+    * classes-and-relationships
+    * use case
+    * statechart
+    * sequence
+  * Neel's software architecture
+  * Contributions by member
+    
