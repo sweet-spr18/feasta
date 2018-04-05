@@ -4,9 +4,9 @@ An iOS and Android app that allows students at St. John's University, Queens cam
 
 ## For Outsiders:
 ### Project Status
-[x] This app is under active development.
-[ ] This app is already published and under active maintenance.
-[ ] This app is no longer monitored or maintained.
+- [x] This app is under active development.
+- [ ] This app is already published and under active maintenance.
+- [ ] This app is no longer monitored or maintained.
 
 ### Installation
 TBD
