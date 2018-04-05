@@ -41,12 +41,12 @@ As of YYYY.MM.DD: by Authorname
 
 As of 2018.4.5: by Thoa
 * Done:
- * set up meaningful README for most places
- * watched the first 5 videos posted
+  * set up meaningful README for most places
+  * watched the first 5 videos posted
 * Learned/Notice:
- * Kotlin vs. Java: [source](https://www.infoworld.com/article/3224868/java/what-is-kotlin-the-java-alternative-explained.html "InfoWorld Oct 2017 article")
-   * For complete Android dev newbies: Java might be better becauses there are more documentation and examples written in Java. However, converting Java to Kotlin is as simple as pasting the Java code into a Koitlin file.
-   * For most other Android developers: Kotlin code is safe and more concise than Java code; **Kotlin and Java files can coexist in an Android app**; you can expand existing Java apps using Kotlin.
+  * Kotlin vs. Java: [source](https://www.infoworld.com/article/3224868/java/what-is-kotlin-the-java-alternative-explained.html "InfoWorld Oct 2017 article")
+    * For complete Android dev newbies: Java might be better becauses there are more documentation and examples written in Java. However, converting Java to Kotlin is as simple as pasting the Java code into a Koitlin file.
+    * For most other Android developers: Kotlin code is safe and more concise than Java code; **Kotlin and Java files can coexist in an Android app**; you can expand existing Java apps using Kotlin.
 * Next steps:
- * Continue watching the last 4 videos
- * Continue reading the [Android App Fundamentals](https://developer.android.com/guide/components/fundamentals.html) page
+  * Continue watching the last 4 videos
+  * Continue reading the [Android App Fundamentals](https://developer.android.com/guide/components/fundamentals.html) page
