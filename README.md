@@ -1,4 +1,4 @@
-# FEASTA
+# Feasta
 
 An iOS and Android app that allows students at St. John's University, Queens campus, to locate events around campus that offer free food.
 
@@ -15,7 +15,7 @@ TBD
 TBD
 
 ### License & Contributing
-FEASTA is developed by six members of the SWEET team for their Software Engineering course at St. John's University in Spring 2018. Once the app is made available, users are free and welcome to use the app. Feedback and issue reporting from both developers and users is welcome. However, as part of the academic integrity, copying or reusing the code of this project without proper citation is not allowed and may result in your own risks of violating academic institution regulations. 
+Feasta is developed by six members of the SWEET team for their Software Engineering course at St. John's University in Spring 2018. Once the app is made available, users are free and welcome to use the app. Feedback and issue reporting from both developers and users is welcome. However, as part of the academic integrity, copying or reusing the code of this project without proper citation is not allowed and may result in your own risks of violating academic institution regulations. 
 
 While SWEET makes our best effort to ensure the app works correctly and properly, use this app at your own risk. Your use of this app implies you hold SWEET of no liability for any damage or benefits caused. 
 
