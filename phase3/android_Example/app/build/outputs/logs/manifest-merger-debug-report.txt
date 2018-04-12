@@ -1,0 +1,197 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:2:1-33:12
+MERGED from [com.android.support:design:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ed0362d5a47e1f2fac537fd7a24a4f8b/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/a41a48052350989fe0c219cfd3fec5c1/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:transition:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/f83c067447c561184c648e6302300473/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7fab6a156ac4c1f85b875b80aeedbadc/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/0f1a57ee5667bc3344fbdcb4d04ef93e/AndroidManifest.xml:17:1-28:12
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/neel/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/28b1e7d563c052b6808c9ab94eaaf039/AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b8f19a07ddb670039f3993530df41279/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:palette-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/5ee1a21efe96af9b3de6a34669a9796a/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-fragment:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2f1790968d6f319d7b435e2ba6255600/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a4fd62850157f9edb375748cd79680fb/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/37406403e0f2509d7b756ef81959bf79/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/444e10e61f02d369799fda089880a2e9/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/e65c13e49f0fcc2bff4c9ed28596fc7f/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e2c9b039f2fe265c5d4c135177d02251/AndroidManifest.xml:17:1-31:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/neel/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/a541d4026635283055918c2b311aada2/AndroidManifest.xml:15:1-21:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/neel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/13a7a9bf5f282799a47da7b8f8a129cf/AndroidManifest.xml:17:1-30:12
+INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:2:1-33:12
+	package
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:3:5-37
+		INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+		INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:2:1-33:12
+		INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:2:1-33:12
+		INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:4:5-63
+uses-permission#android.permission.INTERNET
+ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:6:22-64
+application
+ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:8:5-31:19
+MERGED from [com.android.support:design:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ed0362d5a47e1f2fac537fd7a24a4f8b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:design:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ed0362d5a47e1f2fac537fd7a24a4f8b/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/a41a48052350989fe0c219cfd3fec5c1/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/a41a48052350989fe0c219cfd3fec5c1/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:transition:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/f83c067447c561184c648e6302300473/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:transition:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/f83c067447c561184c648e6302300473/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7fab6a156ac4c1f85b875b80aeedbadc/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7fab6a156ac4c1f85b875b80aeedbadc/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/0f1a57ee5667bc3344fbdcb4d04ef93e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/0f1a57ee5667bc3344fbdcb4d04ef93e/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b8f19a07ddb670039f3993530df41279/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b8f19a07ddb670039f3993530df41279/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:palette-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/5ee1a21efe96af9b3de6a34669a9796a/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:palette-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/5ee1a21efe96af9b3de6a34669a9796a/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2f1790968d6f319d7b435e2ba6255600/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2f1790968d6f319d7b435e2ba6255600/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a4fd62850157f9edb375748cd79680fb/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a4fd62850157f9edb375748cd79680fb/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/37406403e0f2509d7b756ef81959bf79/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/37406403e0f2509d7b756ef81959bf79/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/444e10e61f02d369799fda089880a2e9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/444e10e61f02d369799fda089880a2e9/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/e65c13e49f0fcc2bff4c9ed28596fc7f/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/e65c13e49f0fcc2bff4c9ed28596fc7f/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e2c9b039f2fe265c5d4c135177d02251/AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e2c9b039f2fe265c5d4c135177d02251/AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/neel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/13a7a9bf5f282799a47da7b8f8a129cf/AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/neel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/13a7a9bf5f282799a47da7b8f8a129cf/AndroidManifest.xml:24:5-28:19
+	android:label
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:12:9-41
+	android:icon
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:10:9-35
+	android:theme
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:13:9-40
+	android:name
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:9:9-40
+activity#com.esoxjem.movieguide.listing.MoviesListingActivity
+ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:14:9-22:20
+	android:launchMode
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:16:13-44
+	android:name
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:15:13-58
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:17:13-21:29
+action#android.intent.action.MAIN
+ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:18:17-68
+	android:name
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:20:17-76
+	android:name
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:20:27-74
+activity#com.esoxjem.movieguide.details.MovieDetailsActivity
+ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:23:9-30:20
+	android:parentActivityName
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:25:13-72
+	android:theme
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:26:13-44
+	android:name
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:24:13-57
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:27:13-29:65
+	android:value
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:29:17-63
+	android:name
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml:28:17-63
+uses-sdk
+INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ed0362d5a47e1f2fac537fd7a24a4f8b/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ed0362d5a47e1f2fac537fd7a24a4f8b/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/a41a48052350989fe0c219cfd3fec5c1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/a41a48052350989fe0c219cfd3fec5c1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:transition:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/f83c067447c561184c648e6302300473/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/f83c067447c561184c648e6302300473/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7fab6a156ac4c1f85b875b80aeedbadc/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7fab6a156ac4c1f85b875b80aeedbadc/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/0f1a57ee5667bc3344fbdcb4d04ef93e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/0f1a57ee5667bc3344fbdcb4d04ef93e/AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/neel/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/28b1e7d563c052b6808c9ab94eaaf039/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] /home/neel/.gradle/caches/transforms-1/files-1.1/butterknife-8.8.1.aar/28b1e7d563c052b6808c9ab94eaaf039/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b8f19a07ddb670039f3993530df41279/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b8f19a07ddb670039f3993530df41279/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:palette-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/5ee1a21efe96af9b3de6a34669a9796a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:palette-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/5ee1a21efe96af9b3de6a34669a9796a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2f1790968d6f319d7b435e2ba6255600/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2f1790968d6f319d7b435e2ba6255600/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a4fd62850157f9edb375748cd79680fb/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a4fd62850157f9edb375748cd79680fb/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/37406403e0f2509d7b756ef81959bf79/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/37406403e0f2509d7b756ef81959bf79/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/444e10e61f02d369799fda089880a2e9/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/444e10e61f02d369799fda089880a2e9/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/e65c13e49f0fcc2bff4c9ed28596fc7f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/e65c13e49f0fcc2bff4c9ed28596fc7f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e2c9b039f2fe265c5d4c135177d02251/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e2c9b039f2fe265c5d4c135177d02251/AndroidManifest.xml:21:5-23:58
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/neel/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/a541d4026635283055918c2b311aada2/AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] /home/neel/.gradle/caches/transforms-1/files-1.1/rxandroid-2.0.1.aar/a541d4026635283055918c2b311aada2/AndroidManifest.xml:19:5-43
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/neel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/13a7a9bf5f282799a47da7b8f8a129cf/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] /home/neel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/13a7a9bf5f282799a47da7b8f8a129cf/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ed0362d5a47e1f2fac537fd7a24a4f8b/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+		INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+		ADDED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+		INJECTED from /home/neel/GitHub_Projects/feasta/phase3/android_Example/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ed0362d5a47e1f2fac537fd7a24a4f8b/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/a41a48052350989fe0c219cfd3fec5c1/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:appcompat-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/a41a48052350989fe0c219cfd3fec5c1/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:transition:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/f83c067447c561184c648e6302300473/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:transition:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/transition-26.1.0.aar/f83c067447c561184c648e6302300473/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7fab6a156ac4c1f85b875b80aeedbadc/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/7fab6a156ac4c1f85b875b80aeedbadc/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/0f1a57ee5667bc3344fbdcb4d04ef93e/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:recyclerview-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.1.0.aar/0f1a57ee5667bc3344fbdcb4d04ef93e/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b8f19a07ddb670039f3993530df41279/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/b8f19a07ddb670039f3993530df41279/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:palette-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/5ee1a21efe96af9b3de6a34669a9796a/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:palette-v7:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/palette-v7-26.1.0.aar/5ee1a21efe96af9b3de6a34669a9796a/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2f1790968d6f319d7b435e2ba6255600/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/2f1790968d6f319d7b435e2ba6255600/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a4fd62850157f9edb375748cd79680fb/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-utils-26.1.0.aar/a4fd62850157f9edb375748cd79680fb/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/37406403e0f2509d7b756ef81959bf79/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-26.1.0.aar/37406403e0f2509d7b756ef81959bf79/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/444e10e61f02d369799fda089880a2e9/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/444e10e61f02d369799fda089880a2e9/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/e65c13e49f0fcc2bff4c9ed28596fc7f/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-26.1.0.aar/e65c13e49f0fcc2bff4c9ed28596fc7f/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e2c9b039f2fe265c5d4c135177d02251/AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/e2c9b039f2fe265c5d4c135177d02251/AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:design:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ed0362d5a47e1f2fac537fd7a24a4f8b/AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:design:26.1.0] /home/neel/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ed0362d5a47e1f2fac537fd7a24a4f8b/AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/neel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/13a7a9bf5f282799a47da7b8f8a129cf/AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/neel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/13a7a9bf5f282799a47da7b8f8a129cf/AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] /home/neel/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/13a7a9bf5f282799a47da7b8f8a129cf/AndroidManifest.xml:26:13-58
