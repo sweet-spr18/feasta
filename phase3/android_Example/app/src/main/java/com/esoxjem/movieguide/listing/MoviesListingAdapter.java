@@ -72,8 +72,11 @@ public class MoviesListingAdapter extends RecyclerView.Adapter<MoviesListingAdap
     public void onBindViewHolder(final ViewHolder holder, int position) {
         holder.itemView.setOnClickListener(holder);
         holder.movie = movies.get(position);
-        holder.name.setText("DAC");
-        holder.poster.setImageResource(R.drawable.dac);
+        holder.name.setText("DAC"); //original code: holder.movie.getTitle()
+        holder.poster.setImageResource(R.drawable.dac); //orignal code does not have this line
+                                                        //we'll want to modify this to set an array of
+                                                        //building images, not 1 single image
+                                                        //see the PosterPath below
 
         /*RequestOptions options = new RequestOptions()
                 .centerCrop()

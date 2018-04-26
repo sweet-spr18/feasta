@@ -99,12 +99,14 @@ public class MoviesListingFragment extends Fragment implements MoviesListingView
     private void initLayoutReferences() {
         moviesListing.setHasFixedSize(true);
 
-        int columns;
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            columns = 1;
+        int columns = 1; //we hardcode the no. of columns to 1 for now
+                        //but in the future, we might want to adapt it to phone orientation/screensize
+                        //using the code below and the `integers.xml` files under `res/integers/`
+        /*if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            columns = 2;
         } else {
-            columns = 1;
-        }
+            columns = getResources().getIntegers()(R.integer.no_of_columns);
+        }*/
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(), columns);
 
         moviesListing.setLayoutManager(layoutManager);
