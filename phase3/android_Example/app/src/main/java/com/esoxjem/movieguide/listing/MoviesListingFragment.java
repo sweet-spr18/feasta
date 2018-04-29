@@ -101,7 +101,7 @@ public class MoviesListingFragment extends Fragment implements MoviesListingView
 
         int columns;
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            columns = 2;
+            columns = 1;
         } else {
             columns = getResources().getInteger(R.integer.no_of_columns);
         }
