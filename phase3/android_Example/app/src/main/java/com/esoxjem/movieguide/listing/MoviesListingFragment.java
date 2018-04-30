@@ -2,7 +2,6 @@ package com.esoxjem.movieguide.listing;
 
 
 import android.content.Context;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.design.widget.Snackbar;
@@ -125,7 +124,7 @@ public class MoviesListingFragment extends Fragment implements MoviesListingView
 
     @Override
     public void loadingStarted() {
-        Snackbar.make(moviesListing, R.string.loading_movies, Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(moviesListing, R.string.loading_events, Snackbar.LENGTH_SHORT).show();
     }
 
     @Override
