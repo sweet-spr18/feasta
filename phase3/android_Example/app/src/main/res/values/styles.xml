@@ -41,5 +41,5 @@
         <item name="android:textColor">@android:color/transparent</item>
     </style>
 
-    <string name="movie_details">Movie Details</string>
+    <string name="event_details">Event Details</string>
 </resources>

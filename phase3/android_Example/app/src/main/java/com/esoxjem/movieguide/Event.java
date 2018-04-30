@@ -5,48 +5,54 @@ import android.os.Parcelable;
 
 import com.squareup.moshi.Json;
 
-public class Movie implements Parcelable
+public class Event implements Parcelable
 {
     private String id;
     private String overview;
     @Json(name = "release_date")
     private String releaseDate;
     @Json(name = "poster_path")
-    private String posterPath;
+    private String posterPath;      //food image
     @Json(name = "backdrop_path")
-    private String backdropPath;
+    private String backdropPath;    //food image
     private String title;
-    @Json(name = "vote_average")
-    private double voteAverage;
+    @Json(name = "likes_count")
+    private int likesCount;
+    @Json(name = "host")
+    private String hostName;
+    @Json(name = "building")
+    private String buildingName;
 
-    public Movie()
+    public Event()
     {
 
     }
 
-    protected Movie(Parcel in)
+    protected Event(Parcel in)
     {
         id = in.readString();
         overview = in.readString();
         releaseDate = in.readString();
         posterPath = in.readString();
         backdropPath = in.readString();
-        title = "DAC";
-        voteAverage = in.readDouble();
+        title = in.readString();
+        likesCount = in.readInt();
+        hostName = in.readString();
+        buildingName = in.readString();
     }
 
-    public static final Creator<Movie> CREATOR = new Creator<Movie>()
+    public static final Creator<Event> CREATOR = new Creator<Event>()
     {
         @Override
-        public Movie createFromParcel(Parcel in)
+        public Event createFromParcel(Parcel in)
         {
-            return new Movie(in);
+            return new Event(in);
         }
 
         @Override
-        public Movie[] newArray(int size)
+        public Event[] newArray(int size)
         {
-            return new Movie[size];
+            return new Event[size];
         }
     };
 
@@ -110,14 +116,30 @@ public class Movie implements Parcelable
         this.title = title;
     }
 
-    public double getVoteAverage()
+    public double getLikesCount()
     {
-        return voteAverage;
+        return likesCount;
     }
 
-    public void setVoteAverage(double voteAverage)
+    public void setLikesCount(int likesCount)
     {
-        this.voteAverage = voteAverage;
+        this.likesCount = likesCount;
+    }
+
+    public String getHostName() {
+        return hostName;
+    }
+
+    public void setHostName(String hostName) {
+        this.hostName = hostName;
+    }
+
+    public String getBuildingName() {
+        return buildingName;
+    }
+
+    public void setBuildingName(String buildingName) {
+        this.buildingName = buildingName;
     }
 
     @Override
@@ -135,6 +157,6 @@ public class Movie implements Parcelable
         parcel.writeString(posterPath);
         parcel.writeString(backdropPath);
         parcel.writeString(title);
-        parcel.writeDouble(voteAverage);
+        parcel.writeDouble(likesCount);
     }
 }

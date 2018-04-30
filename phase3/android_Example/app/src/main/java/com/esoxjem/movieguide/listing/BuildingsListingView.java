@@ -1,16 +1,17 @@
 package com.esoxjem.movieguide.listing;
 
+import com.esoxjem.movieguide.Building;
 import com.esoxjem.movieguide.Movie;
 
 import java.util.List;
 
 /**
- * @author arun
+ * @author tta
  */
-interface MoviesListingView
+interface BuildingsListingView
 {
-    void showMovies(List<Movie> movies);
+    void showBuildings(List<Building> buildings);
     void loadingStarted();
     void loadingFailed(String errorMessage);
-    void onMovieClicked(Movie movie);
+    void onBuildingClicked(Building building);
 }

@@ -6,19 +6,19 @@ import android.os.Parcelable;
 /**
  * @author arun
  */
-public class Review implements Parcelable
+public class Comment implements Parcelable
 {
     private String id;
     private String author;
     private String content;
     private String url;
 
-    public Review()
+    public Comment()
     {
 
     }
 
-    protected Review(Parcel in)
+    protected Comment(Parcel in)
     {
         id = in.readString();
         author = in.readString();
@@ -26,18 +26,18 @@ public class Review implements Parcelable
         url = in.readString();
     }
 
-    public static final Creator<Review> CREATOR = new Creator<Review>()
+    public static final Creator<Comment> CREATOR = new Creator<Comment>()
     {
         @Override
-        public Review createFromParcel(Parcel in)
+        public Comment createFromParcel(Parcel in)
         {
-            return new Review(in);
+            return new Comment(in);
         }
 
         @Override
-        public Review[] newArray(int size)
+        public Comment[] newArray(int size)
         {
-            return new Review[size];
+            return new Comment[size];
         }
     };
 

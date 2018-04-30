@@ -1,8 +1,6 @@
 package com.esoxjem.movieguide.details;
 
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -53,8 +51,8 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
     TextView title;
     @BindView(R.id.movie_year)
     TextView releaseDate;
-    @BindView(R.id.movie_rating)
-    TextView rating;
+    @BindView(R.id.event_likes)
+    TextView likes_count;
     @BindView(R.id.movie_description)
     TextView overview;
     @BindView(R.id.trailers_label)
@@ -127,7 +125,7 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
     private void setToolbar()
     {
         collapsingToolbar.setContentScrimColor(ContextCompat.getColor(getContext(), R.color.colorPrimary));
-        collapsingToolbar.setTitle(getString(R.string.movie_details));
+        collapsingToolbar.setTitle(getString(R.string.event_details));
         collapsingToolbar.setCollapsedTitleTextAppearance(R.style.CollapsedToolbar);
         collapsingToolbar.setExpandedTitleTextAppearance(R.style.ExpandedToolbar);
         collapsingToolbar.setTitleEnabled(true);
@@ -153,7 +151,7 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
         Glide.with(getContext()).load(Api.getBackdropPath(movie.getBackdropPath())).into(poster);
         title.setText(movie.getTitle());
         releaseDate.setText(String.format(getString(R.string.release_date), movie.getReleaseDate()));
-        rating.setText(String.format(getString(R.string.rating), String.valueOf(movie.getVoteAverage())));
+        likes_count.setText(String.format(getString(R.string.likes_count), String.valueOf(movie.getVoteAverage())));
         overview.setText(movie.getOverview());
         movieDetailsPresenter.showTrailers(movie);
         movieDetailsPresenter.showReviews(movie);
@@ -241,9 +239,9 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
     {
         switch (view.getId())
         {
-            case R.id.video_thumb:
+            /*case R.id.video_thumb:
                 onThumbnailClick(view);
-                break;
+                break;*/
 
             case R.id.review_content:
                 onReviewClick((TextView) view);
@@ -269,12 +267,12 @@ public class MovieDetailsFragment extends Fragment implements MovieDetailsView, 
         }
     }
 
-    private void onThumbnailClick(View view)
+    /*private void onThumbnailClick(View view)
     {
         String videoUrl = (String) view.getTag(R.id.glide_tag);
         Intent playVideoIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(videoUrl));
         startActivity(playVideoIntent);
-    }
+    }*/
 
     private void onFavoriteClick()
     {

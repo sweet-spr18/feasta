@@ -1,56 +1,56 @@
 package com.esoxjem.movieguide;
 
+import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.squareup.moshi.Json;
 
-public class Movie implements Parcelable
+public class Building
 {
-    private String id;
-    private String overview;
-    @Json(name = "release_date")
-    private String releaseDate;
+    /*private String id;
     @Json(name = "poster_path")
     private String posterPath;
     @Json(name = "backdrop_path")
-    private String backdropPath;
-    private String title;
-    @Json(name = "vote_average")
-    private double voteAverage;
+    private String backdropPath;*/
+    private String name;
+    private int photoID;
 
-    public Movie()
+    public Building()
     {
 
     }
 
-    protected Movie(Parcel in)
+    public Building(String name, int photoID) {
+        this.name = name;
+        this.photoID = photoID;
+
+    }
+
+    /*protected Building(Parcel in)
     {
         id = in.readString();
-        overview = in.readString();
-        releaseDate = in.readString();
-        posterPath = in.readString();
-        backdropPath = in.readString();
-        title = "DAC";
-        voteAverage = in.readDouble();
+        *//*posterPath = in.readString();
+        backdropPath = in.readString();*//*
+        name = "DAC";
     }
 
-    public static final Creator<Movie> CREATOR = new Creator<Movie>()
+    public static final Creator<Building> CREATOR = new Creator<Building>()
     {
         @Override
-        public Movie createFromParcel(Parcel in)
+        public Building createFromParcel(Parcel in)
         {
-            return new Movie(in);
+            return new Building(in);
         }
 
         @Override
-        public Movie[] newArray(int size)
+        public Building[] newArray(int size)
         {
-            return new Movie[size];
+            return new Building[size];
         }
-    };
+    };*/
 
-    public String getId()
+    /*public String getId()
     {
         return id;
     }
@@ -58,29 +58,9 @@ public class Movie implements Parcelable
     public void setId(String id)
     {
         this.id = id;
-    }
+    }*/
 
-    public String getOverview()
-    {
-        return overview;
-    }
-
-    public void setOverview(String overview)
-    {
-        this.overview = overview;
-    }
-
-    public String getReleaseDate()
-    {
-        return releaseDate;
-    }
-
-    public void setReleaseDate(String releaseDate)
-    {
-        this.releaseDate = releaseDate;
-    }
-
-    public String getPosterPath()
+    /*public String getPosterPath()
     {
         return posterPath;
     }
@@ -98,29 +78,27 @@ public class Movie implements Parcelable
     public void setBackdropPath(String backdropPath)
     {
         this.backdropPath = backdropPath;
-    }
+    }*/
 
-    public String getTitle()
+    public String getName()
     {
-        return title;
+        return name;
     }
 
-    public void setTitle(String title)
+    public void setName(String name)
     {
-        this.title = title;
+        this.name = name;
     }
 
-    public double getVoteAverage()
-    {
-        return voteAverage;
+    public int getPhotoID() {
+        return photoID;
     }
 
-    public void setVoteAverage(double voteAverage)
-    {
-        this.voteAverage = voteAverage;
+    public void setPhotoID(int photoID) {
+        this.photoID = photoID;
     }
 
-    @Override
+    /*@Override
     public int describeContents()
     {
         return 0;
@@ -130,11 +108,8 @@ public class Movie implements Parcelable
     public void writeToParcel(Parcel parcel, int i)
     {
         parcel.writeString(id);
-        parcel.writeString(overview);
-        parcel.writeString(releaseDate);
-        parcel.writeString(posterPath);
-        parcel.writeString(backdropPath);
-        parcel.writeString(title);
-        parcel.writeDouble(voteAverage);
-    }
+        *//*parcel.writeString(posterPath);
+        parcel.writeString(backdropPath);*//*
+        parcel.writeString(name);
+    }*/
 }
