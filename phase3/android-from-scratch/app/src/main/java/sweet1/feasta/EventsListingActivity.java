@@ -24,10 +24,13 @@ public class EventsListingActivity extends AppCompatActivity {
         eventArrayList.add(new Event("event2", "org2", "DAC 106", "6:00 PM - 8:00 PM"));
         eventArrayList.add(new Event("event3", "org3", "DAC 416", "9:30 AM - 12:00 PM"));
 
+        //initialize our Recycler and our Adapter
         mRecyclerView = (RecyclerView) findViewById(R.id.eventsListingRecyclerView);
         mAdapter = new EventAdapter(eventArrayList);
 
+        //set up the Recycler and the Adapter
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(EventsListingActivity.this);
         mRecyclerView.setLayoutManager(layoutManager);
+        mRecyclerView.setAdapter(mAdapter);
     }
 }

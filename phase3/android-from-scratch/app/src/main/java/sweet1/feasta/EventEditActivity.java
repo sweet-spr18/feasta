@@ -1,12 +1,8 @@
 package sweet1.feasta;
 
-/**
- * @author: tta
- *
- */
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -19,23 +15,22 @@ public class EventEditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_edit);
 
-        Toolbar eventEditToolbar = (Toolbar) findViewById(R.id.eventEditToolbar);
+        Toolbar eventEditToolbar = findViewById(R.id.eventEditToolbar);
         setSupportActionBar(eventEditToolbar);
+
+        /* Get a support ActionBar corresponding to this toolbar */
+        ActionBar ab = getSupportActionBar();
+
+        /* Enable the Up button */
+        assert ab != null;
+        ab.setDisplayHomeAsUpEnabled(true);
 
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        Toolbar eventEditToolbar = (Toolbar) findViewById(R.id.eventEditToolbar);
-        eventEditToolbar.inflateMenu(R.menu.menu_event_edit);
-        eventEditToolbar.setOnMenuItemClickListener(
-                new Toolbar.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        return onOptionsItemSelected(item);
-                    }
-                }
-        );
+        // Inflate the menu; this adds items to the bar if it is present
+        getMenuInflater().inflate(R.menu.menu_event_edit, menu);
         return true;
     }
 

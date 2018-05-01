@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     card_view:cardCornerRadius="6dp"
     card_view:cardElevation="3dp"
     card_view:cardUseCompatPadding="true">
@@ -11,7 +10,9 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:padding="5dp">
 
         <TextView
             android:id="@+id/eventNameTextView"
@@ -30,7 +31,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:text="Org Name"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/eventNameTextView" />
@@ -49,8 +49,7 @@
             android:id="@+id/timeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:text="Time"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintTop_toBottomOf="@+id/locationTextView" />
@@ -61,13 +60,28 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="50dp"
             android:contentDescription="food image"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
-            card_view:layout_constraintHorizontal_bias="0.5"
             card_view:layout_constraintStart_toStartOf="parent"
             card_view:layout_constraintTop_toTopOf="parent"
             card_view:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/foodTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Food Type"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="@+id/foodImageView"
+            card_view:layout_constraintStart_toStartOf="@+id/foodImageView"
+            card_view:layout_constraintTop_toTopOf="@+id/foodImageView" />
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>
