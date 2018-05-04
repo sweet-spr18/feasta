@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">comments</string>
+    <string name="post">Post</string>
+    <string name="add_the_comments">Add the comments</string>
+    <string name="comments">Comments</string>
+    <string name="comment_text">Comment Text</string>
+    <string name="username">UserName</string>
+    <string name="timestamp">Timestamp</string>
+</resources>
