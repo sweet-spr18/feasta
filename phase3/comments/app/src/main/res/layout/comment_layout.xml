@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+
+        android:id="@+id/AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:fitsSystemWindows="true">
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+
+        <android.support.v7.widget.RecyclerView
+        android:id="@+id/CommentRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_below="@+id/AppBarLayout">
+        </android.support.v7.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/CommentEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CommentRecyclerView"
+        android:text="@string/add_the_comments"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="362dp"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:lines="4"
+        tools:ignore="LabelFor" />
+
+
+    <Button
+        android:id="@+id/PostBtn"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/post"
+        android:layout_alignParentRight="true" />
+
+
+
+</RelativeLayout>
+
