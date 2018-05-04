@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     card_view:cardCornerRadius="6dp"
     card_view:cardElevation="3dp"
     card_view:cardUseCompatPadding="true">
 
-
+    <!-- Each card like this holds all the details about an event -->
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -83,5 +84,26 @@
             card_view:layout_constraintEnd_toEndOf="@+id/foodImageView"
             card_view:layout_constraintStart_toStartOf="@+id/foodImageView"
             card_view:layout_constraintTop_toTopOf="@+id/foodImageView" />
+
+        <!--<ToggleButton
+            android:id="@+id/favoriteToggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="like button"
+            android:text="@string/button_favorite_default"
+            android:textOff="@string/button_favorite_default"
+            android:textOn="@string/button_favorite_default"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent" />-->
+
+        <Button
+            android:id="@+id/commentBtn"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_comment_black_24dp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent" />
     </android.support.constraint.ConstraintLayout>
 </android.support.v7.widget.CardView>

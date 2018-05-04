@@ -5,26 +5,18 @@ public class Event {
     private String orgName;
     private String location;
     private String time;
-    /*private String[] foodTypes;
+    private String foodType;
     private int likesCount;
-    private Comment[] comments;*/
+    /*private Comment[] comments;*/
 
-    public Event(String eventName, String orgName, String location, String time) {
+    public Event(String eventName, String orgName, String location, String time, String foodType, int likesCount) {
         this.eventName = eventName;
         this.orgName = orgName;
         this.location = location;
         this.time = time;
-    }
-
-    /*public Event(String eventName, String orgName, String location, String time, String[] foodTypes, int likesCount, Comment[] comments) {
-        this.eventName = eventName;
-        this.orgName = orgName;
-        this.location = location;
-        this.time = time;
-        this.foodTypes = foodTypes;
+        this.foodType = foodType;
         this.likesCount = likesCount;
-        this.comments = comments;
-    }*/
+    }
 
     public String getEventName() {
         return eventName;
@@ -58,12 +50,12 @@ public class Event {
         this.time = time;
     }
 
-   /* public String[] getFoodTypes() {
-        return foodTypes;
+    public String getFoodType() {
+        return foodType;
     }
 
-    public void setFoodTypes(String[] foodTypes) {
-        this.foodTypes = foodTypes;
+    public void setFoodType(String foodType) {
+        this.foodType = foodType;
     }
 
     public int getLikesCount() {
@@ -74,6 +66,7 @@ public class Event {
         this.likesCount = likesCount;
     }
 
+    /*
     public Comment[] getComments() {
         return comments;
     }

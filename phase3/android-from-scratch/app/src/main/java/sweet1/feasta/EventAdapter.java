@@ -6,9 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import java.util.ArrayList;
 
+/**
+ * The purpose of this class is to bind data in an ArrayList of events to a ViewHolder,
+ * then offer that to the View object to present on the Activity.
+ */
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder> {
     private ArrayList<Event> events;
 
@@ -31,6 +36,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
         holder.location.setText(events.get(position).getLocation());
         holder.time.setText(events.get(position).getTime());
         //holder.foodImage.setText(events.get(position).getOrgName());
+        holder.foodType.setText(events.get(position).getFoodType());
+        //holder.likesCount.setText(events.get(position).getLikesCount() + " likes");
     }
 
     @Override
@@ -40,7 +47,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
 
     class EventViewHolder extends RecyclerView.ViewHolder {
 
-        TextView eventName, orgName, location, time;
+        TextView eventName, orgName, location, time, foodType;
+        ToggleButton likesCount;
 
         EventViewHolder(View itemView) {
             super(itemView);
@@ -48,6 +56,8 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHol
             orgName     = (TextView) itemView.findViewById(R.id.orgNameTextView);
             location    = (TextView) itemView.findViewById(R.id.locationTextView);
             time        = (TextView) itemView.findViewById(R.id.timeTextView);
+            foodType    = (TextView) itemView.findViewById(R.id.foodTypeTextView);
+            //likesCount  = (ToggleButton) itemView.findViewById(R.id.favoriteToggleButton);
         }
     }
 }

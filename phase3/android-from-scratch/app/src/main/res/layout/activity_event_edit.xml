@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".EventEditActivity">
 
+    <!-- THE TOOLBAR -->
     <android.support.v7.widget.Toolbar
         android:id="@+id/eventEditToolbar"
         android:layout_width="match_parent"
@@ -19,9 +20,12 @@
         app:title="@string/app_name"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
+    <!-- THE FILLABLE FORM -->
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <!-- TODO: place the fill-in form in here (see Mockup.png on GitHub) -->
 
     </android.support.constraint.ConstraintLayout>
 
