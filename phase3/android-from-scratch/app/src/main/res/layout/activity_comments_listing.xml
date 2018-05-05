@@ -24,6 +24,16 @@
 
     </android.support.design.widget.AppBarLayout>-->
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/eventsListingToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:title="Comments"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <!-- THE LIST OF COMMENTS START HERE -->
     <android.support.constraint.ConstraintLayout

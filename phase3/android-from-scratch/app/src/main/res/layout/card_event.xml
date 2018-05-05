@@ -87,8 +87,8 @@
 
         <ToggleButton
             android:id="@+id/likeToggleBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="6mm"
+            android:layout_height="6mm"
             android:contentDescription="like button"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintStart_toStartOf="parent" />
