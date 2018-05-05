@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -17,6 +20,10 @@ public class CommentsListingActivity extends AppCompatActivity {
     private CommentsListingAdapter adapter;
     private RecyclerView recyclerView;
     private List<Comment> commentList;
+
+    // Write a message to the database
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("comment");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +66,7 @@ public class CommentsListingActivity extends AppCompatActivity {
         final EditText editComment = (EditText)findViewById(R.id.CommentEditText);
         Button postBtn = (Button) findViewById(R.id.PostBtn);
 
+
         //create on click listener method to the post commentBtn button
         postBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +74,9 @@ public class CommentsListingActivity extends AppCompatActivity {
                 String commentText = editComment.getText().toString();
                 commentList.add(new Comment(commentText, "Jing03", Calendar.getInstance().getTime().toString()));
                 adapter.notifyDataSetChanged();
+
+
+                myRef.setValue(commentText);
                 editComment.setText(null);
             }
         });
