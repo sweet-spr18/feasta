@@ -5,5 +5,11 @@
     <string name="action_edit">Edit an Event</string>
     <string name="action_add">Create an Event</string>
     <string name="action_logout">Log out</string>
-    <string name="button_favorite_default">0 like</string>
+    <string name="likes_count_default">0 like</string>
+    <string name="button_post_a_comment">Post</string>
+    <string name="edittext_hint_add_a_comment">Add a comment</string>
+    <string name="comments">Comments</string>
+    <string name="comment_text">Comment Text</string>
+    <string name="username">UserName</string>
+    <string name="timestamp">Timestamp</string>
 </resources>

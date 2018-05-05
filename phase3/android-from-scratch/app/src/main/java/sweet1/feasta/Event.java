@@ -1,5 +1,7 @@
 package sweet1.feasta;
 
+import java.util.List;
+
 public class Event {
     private String eventName;
     private String orgName;
@@ -7,15 +9,16 @@ public class Event {
     private String time;
     private String foodType;
     private int likesCount;
-    /*private Comment[] comments;*/
+    private List<Comment> comments;
 
-    public Event(String eventName, String orgName, String location, String time, String foodType, int likesCount) {
+    public Event(String eventName, String orgName, String location, String time, String foodType, int likesCount, List<Comment> comments) {
         this.eventName = eventName;
         this.orgName = orgName;
         this.location = location;
         this.time = time;
         this.foodType = foodType;
         this.likesCount = likesCount;
+        this.comments = comments;
     }
 
     public String getEventName() {
@@ -66,12 +69,11 @@ public class Event {
         this.likesCount = likesCount;
     }
 
-    /*
-    public Comment[] getComments() {
+    public List<Comment> getComments() {
         return comments;
     }
 
-    public void setComments(Comment[] comments) {
+    public void setComments(List<Comment> comments) {
         this.comments = comments;
-    }*/
+    }
 }

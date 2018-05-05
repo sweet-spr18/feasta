@@ -85,18 +85,23 @@
             card_view:layout_constraintStart_toStartOf="@+id/foodImageView"
             card_view:layout_constraintTop_toTopOf="@+id/foodImageView" />
 
-        <!--<ToggleButton
-            android:id="@+id/favoriteToggleButton"
+        <ToggleButton
+            android:id="@+id/likeToggleBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="like button"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/likesCountTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginStart="8dp"
-            android:contentDescription="like button"
-            android:text="@string/button_favorite_default"
-            android:textOff="@string/button_favorite_default"
-            android:textOn="@string/button_favorite_default"
+            android:text="@string/likes_count_default"
             card_view:layout_constraintBottom_toBottomOf="parent"
-            card_view:layout_constraintStart_toStartOf="parent" />-->
+            card_view:layout_constraintStart_toEndOf="@+id/likeToggleBtn" />
 
         <Button
             android:id="@+id/commentBtn"

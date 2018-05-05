@@ -17,7 +17,7 @@ public class EventsListingActivity extends AppCompatActivity {
 
     Toolbar mToolbar;
     private RecyclerView mRecyclerView;
-    private EventAdapter mAdapter;
+    private EventsListingAdapter mAdapter;
     private ArrayList<Event> eventArrayList;
 
 
@@ -32,30 +32,18 @@ public class EventsListingActivity extends AppCompatActivity {
         /* Get a support ActionBar corresponding to this toolbar */
         ActionBar ab = getSupportActionBar();
 
-        /* Enable the Up button *//* //NOT SURE YET WHERE THIS UP WILL GO
+        /* Enable the Up button *//* //TODO: THIS WILL NEED TO GO TO THE LocationsListing SCREEN ONCE WE HAVE THAT
         assert ab != null;
         ab.setDisplayHomeAsUpEnabled(true);*/
 
         eventArrayList = new ArrayList<>();
-        eventArrayList.add(new Event("event1", "org1", "DAC 409", "1:50 PM - 3:15 PM", "Pizza", 3));
-        eventArrayList.add(new Event("event2", "org2", "DAC 106", "6:00 PM - 8:00 PM", "Asian", 5));
-        eventArrayList.add(new Event("event3", "org3", "DAC 416", "9:30 AM - 12:00 PM", "Italian", 2));
+        eventArrayList.add(new Event("event1", "org1", "DAC 409", "1:50 PM - 3:15 PM", "Pizza", 3, null));
+        eventArrayList.add(new Event("event2", "org2", "DAC 106", "6:00 PM - 8:00 PM", "Asian", 5, null));
+        eventArrayList.add(new Event("event3", "org3", "DAC 416", "9:30 AM - 12:00 PM", "Italian", 2, null));
 
-        /*final ToggleButton favoriteToggleButton = (ToggleButton) findViewById(R.id.favoriteToggleButton);
-        favoriteToggleButton.setChecked(false);
-        favoriteToggleButton.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_favorite_border_black_24dp));
-        favoriteToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked)
-                    favoriteToggleButton.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_favorite_black_24dp));
-                else
-                    favoriteToggleButton.setBackgroundDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_favorite_border_black_24dp));
-            }
-        });*/
         //initialize our Recycler and our Adapter
         mRecyclerView = (RecyclerView) findViewById(R.id.eventsListingRecyclerView);
-        mAdapter = new EventAdapter(eventArrayList);
+        mAdapter = new EventsListingAdapter(eventArrayList);
 
         //set up the Recycler and the Adapter
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(EventsListingActivity.this);
@@ -65,17 +53,6 @@ public class EventsListingActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        /*mToolbar = (Toolbar) findViewById(R.id.eventsListingToolbar);
-
-        // Inflate the menu; this adds items to the bar if it is present
-        mToolbar.inflateMenu(R.menu.menu_events_listing);
-        mToolbar.setOnMenuItemClickListener(
-                new Toolbar.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        return onOptionsItemSelected(item);
-                    }
-                });*/
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_events_listing, menu);
         return true;
@@ -88,6 +65,8 @@ public class EventsListingActivity extends AppCompatActivity {
                 //TODO: make all entries in the listing selectable
                 Intent editExistingEvent =
                         new Intent(getApplicationContext(), EventEditActivity.class);
+                //TODO: then pass the event id to this putExtra code so that the fillable form can open for the appropriate event
+                //editExistingEvent.putExtra("sweet1.feasta.EVENT-DETAILS", the-Event-object-to-retrieve);
                 startActivity(editExistingEvent);
                 return true;
 
@@ -99,6 +78,7 @@ public class EventsListingActivity extends AppCompatActivity {
 
             case R.id.action_logout:
                 //TODO: make a popup message asking "Do you want to log out?" "Yes" "No"
+                //TODO: then log out or come back to the current screen
 
             default:
                 return super.onOptionsItemSelected(item);

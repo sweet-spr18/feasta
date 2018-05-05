@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\chels\\OneDrive\\Documents\\GitHub\\feasta\\phase3\\android_Example\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "C:\\Users\\Thoa Ta\\Documents\\GitHub\\feasta\\phase3\\android_Example\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\chels\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\21a1e36da0ddb17b8f08a040114c04db\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Thoa Ta\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\9d24b9a732cdd4cc97b75ddab8a805de\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\chels\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\9b9cffbb90cf5ea8fbae56a9a22089c9\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Thoa Ta\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\c21e2a367e55dcd7fabdc696b76fdff7\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,40 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "C:\\home\\neel\\GitHub_Projects\\feasta\\phase3\\android_Example\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
-            "map": [
-                {
-                    "source": "C:\\home\\neel\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\a41a48052350989fe0c219cfd3fec5c1\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "223"
-                    },
-                    "to": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "121",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "C:\\home\\neel\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\e2c9b039f2fe265c5d4c135177d02251\\res\\values-v16\\values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

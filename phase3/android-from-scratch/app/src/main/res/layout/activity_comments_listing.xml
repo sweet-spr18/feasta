@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="sweet1.feasta.CommentsListingActivity">
+
+    <!-- THIS BOX CONTAINS SUMMARY OF EVENT DETAILS -->
+    <!-- WILL BE "FROZEN" SO THAT IT's ALWAYS VISIBLE EVEN IF USER SCROLLS DOWN -->
+    <!--<android.support.design.widget.AppBarLayout
+
+        android:id="@+id/AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:fitsSystemWindows="true"></android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>-->
+
+
+    <!-- THE LIST OF COMMENTS START HERE -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/CommentRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!-- android:layout_below="@+id/AppBarLayout"-->
+
+        <!-- THIS BOX IS TO ALLOW NEW COMMENT -->
+        <EditText
+            android:id="@+id/CommentEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CommentRecyclerView"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="top"
+            android:hint="@string/edittext_hint_add_a_comment"
+            android:inputType="textLongMessage"
+            android:lines="4"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CommentRecyclerView"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/PostBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/button_post_a_comment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CommentEditText" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

@@ -21,7 +21,7 @@ import java.lang.Override;
 public class MovieDetailsFragment_ViewBinding implements Unbinder {
   private MovieDetailsFragment target;
 
-  private View view2131230789;
+  private View view2131230790;
 
   @UiThread
   public MovieDetailsFragment_ViewBinding(final MovieDetailsFragment target, View source) {
@@ -32,7 +32,7 @@ public class MovieDetailsFragment_ViewBinding implements Unbinder {
     target.collapsingToolbar = Utils.findRequiredViewAsType(source, R.id.collapsing_toolbar, "field 'collapsingToolbar'", CollapsingToolbarLayout.class);
     target.title = Utils.findRequiredViewAsType(source, R.id.movie_name, "field 'title'", TextView.class);
     target.releaseDate = Utils.findRequiredViewAsType(source, R.id.movie_year, "field 'releaseDate'", TextView.class);
-    target.rating = Utils.findRequiredViewAsType(source, R.id.movie_rating, "field 'rating'", TextView.class);
+    target.likes_count = Utils.findRequiredViewAsType(source, R.id.event_likes, "field 'likes_count'", TextView.class);
     target.overview = Utils.findRequiredViewAsType(source, R.id.movie_description, "field 'overview'", TextView.class);
     target.label = Utils.findRequiredViewAsType(source, R.id.trailers_label, "field 'label'", TextView.class);
     target.trailers = Utils.findRequiredViewAsType(source, R.id.trailers, "field 'trailers'", LinearLayout.class);
@@ -41,7 +41,7 @@ public class MovieDetailsFragment_ViewBinding implements Unbinder {
     target.reviewsContainer = Utils.findRequiredViewAsType(source, R.id.reviews, "field 'reviewsContainer'", LinearLayout.class);
     view = Utils.findRequiredView(source, R.id.favorite, "field 'favorite' and method 'onClick'");
     target.favorite = Utils.castView(view, R.id.favorite, "field 'favorite'", FloatingActionButton.class);
-    view2131230789 = view;
+    view2131230790 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
       public void doClick(View p0) {
@@ -62,7 +62,7 @@ public class MovieDetailsFragment_ViewBinding implements Unbinder {
     target.collapsingToolbar = null;
     target.title = null;
     target.releaseDate = null;
-    target.rating = null;
+    target.likes_count = null;
     target.overview = null;
     target.label = null;
     target.trailers = null;
@@ -72,7 +72,7 @@ public class MovieDetailsFragment_ViewBinding implements Unbinder {
     target.favorite = null;
     target.toolbar = null;
 
-    view2131230789.setOnClickListener(null);
-    view2131230789 = null;
+    view2131230790.setOnClickListener(null);
+    view2131230790 = null;
   }
 }
