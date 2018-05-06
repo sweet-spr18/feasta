@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "749320511047",
+    "firebase_url": "https://feasta-554a8.firebaseio.com",
+    "project_id": "feasta-554a8",
+    "storage_bucket": "feasta-554a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749320511047:android:6ed22e0c55b33e26",
+        "android_client_info": {
+          "package_name": "sweet1.feasta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749320511047-v9el41rejrj3bestm5g12rmejuv63k5m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sweet1.feasta",
+            "certificate_hash": "6a700be885c9df1d530e257af7fdbc718ad5f778"
+          }
+        },
+        {
+          "client_id": "749320511047-o4pu2e0bjj9v8rumop7egbl2nin0oj5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnDQIZ3Q6drn4Z64fBtF6kxyKZ0QgvMF0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749320511047-o4pu2e0bjj9v8rumop7egbl2nin0oj5t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
