@@ -17,22 +17,22 @@ public class Location {
             case "DAC":
                 setImageResID(R.drawable.dac);
                 break;
-            case "MAR":
+            /*case "MAR":
                 setImageResID(R.drawable.mar);
-                break;
+                break;*/
             case "SJH":
                 setImageResID(R.drawable.sjh);
                 break;
-            case "SUL":
+            /*case "SUL":
                 setImageResID(R.drawable.sul);
-                break;
-            case "SAH":
+                break;*/
+            /*case "SAH":
                 setImageResID(R.drawable.sah);
-                break;
+                break;*/
             case "LIB":
                 setImageResID(R.drawable.lib);
                 break;
-            case "LAW":
+            /*case "LAW":
                 setImageResID(R.drawable.law);
                 break;
             case "BEN":
@@ -58,7 +58,7 @@ public class Location {
                 break;
             case "Adminssions Welcome Ctr":
                 setImageResID(R.drawable.adm_welcome);
-                break;
+                break;*/
         }
 
     /*public int getLocationId() {

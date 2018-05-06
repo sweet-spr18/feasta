@@ -27,9 +27,10 @@ public class LocationsListingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_events_listing);
+        setContentView(R.layout.activity_locations_listing);
 
-        mToolbar = (Toolbar) findViewById(R.id.eventsListingToolbar);
+        //TODO: implement this toolbar
+        mToolbar = (Toolbar) findViewById(R.id.locationsListingToolbar);
         setSupportActionBar(mToolbar);
 
         /* Get a support ActionBar corresponding to this toolbar */
