@@ -1,12 +1,17 @@
 package sweet1.feasta;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -24,11 +29,20 @@ public class CommentsListingActivity extends AppCompatActivity {
     // Write a message to the database
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("comment");
-
+    Toolbar mToolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comments_listing);
+        mToolbar = (Toolbar) findViewById(R.id.commentsListingToolbar);
+        setSupportActionBar(mToolbar);
+
+        /* Get a support ActionBar corresponding to this toolbar */
+        ActionBar ab = getSupportActionBar();
+
+        /* Enable the Up button */
+        assert ab != null;
+        ab.setDisplayHomeAsUpEnabled(true);
 
         //TODO: the "frozen" bar (under the normal App Bar) showing the Event Details (see mockup.png on GitHub), see the activity_comments_listing.xml
 
@@ -80,5 +94,27 @@ public class CommentsListingActivity extends AppCompatActivity {
                 editComment.setText(null);
             }
         });
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_edit:
+                //TODO: publish the event (i.e. add to database)
+                Toast.makeText(CommentsListingActivity.this, "", Toast.LENGTH_LONG).show();
+                Intent backToEvent =
+                        new Intent(getApplicationContext(), EventsListingActivity.class);
+                startActivity(backToEvent);
+                return true;
+
+            //TODO: add an image - either by taking a photo or select from pre-built gallery
+            //TODO: if taking a photo, use Intent.ACTION_IMAGE_CAPTURE, as seen here:
+            //https://developer.android.com/guide/components/intents-common#Camera
+            //TODO: if getting a prebuilt photo, maybe see this link?
+            //https://developer.android.com/guide/components/intents-common#Storage
+            default:
+                return super.onOptionsItemSelected(item);
+
+
+        }
     }
 }

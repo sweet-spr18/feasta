@@ -7,11 +7,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class EventEditActivity extends AppCompatActivity {
 
     Toolbar mToolbar;
+    private ImageButton selectImage;
+    private EditText name;
+    private EditText description;
+    private static final int Gallery_Pick= 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +35,23 @@ public class EventEditActivity extends AppCompatActivity {
         assert ab != null;
         ab.setDisplayHomeAsUpEnabled(true);
 
+        selectImage = (ImageButton) findViewById(R.id.select_image);
+        name = (EditText) findViewById(R.id.event_name);
+        description = (EditText) findViewById(R.id.event_description);
+
+        selectImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                OpenGallery();
+            }
+        });
     }
+        private void OpenGallery(){
+        Intent galleryIntent = new Intent();
+        galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+        galleryIntent.setType("image/*");
+        startActivityForResult(galleryIntent, Gallery_Pick);
+        }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

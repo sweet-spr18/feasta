@@ -83,6 +83,9 @@ public class EventsListingActivity extends AppCompatActivity {
                 Intent editNewEvent =
                         new Intent(getApplicationContext(), EventEditActivity.class);
                 startActivity(editNewEvent);
+
+                //NOT SURE HOW TO TIE IN THE OTHER CLASSES- CHELSEA
+                //eventArrayList.add(NewEvent);
                 return true;
 
             case R.id.action_logout:
