@@ -12,4 +12,22 @@
     <string name="comment_text">Comment Text</string>
     <string name="username">UserName</string>
     <string name="timestamp">Timestamp</string>
+    <string-array name = "locations" >
+        <item>DAC</item>
+        <item>MAR</item>
+        <item>SJH</item>
+        <item>SUL</item>
+        <item>SAH</item>
+        <item>LIB</item>
+        <item>LAW</item>
+        <item>BEN</item>
+        <item>CAR</item>
+        <item>CCK</item>
+        <item>UC</item>
+        <item>Great Lawn</item>
+        <item>President's Room</item>
+        <item>Ozanam Lounge</item>
+        <item>Admissions Welcome Ctr</item>
+
+    </string-array>
 </resources>
