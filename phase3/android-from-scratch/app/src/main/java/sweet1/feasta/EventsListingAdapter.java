@@ -35,41 +35,33 @@ public class EventsListingAdapter extends RecyclerView.Adapter<EventsListingAdap
     }
 
     @Override
-    public void onBindViewHolder(EventViewHolder holder, int position) {
+    public void onBindViewHolder(final EventViewHolder holder, final int position) {
         final int pos = position;
-        holder.eventNameTextView    .setText(events.get(position).getEventName());
-        holder.orgNameTextView      .setText(events.get(position).getOrgName());
-        holder.locationTextView     .setText(events.get(position).getLocation());
-        holder.timeTextView         .setText(events.get(position).getTime());
-        holder.foodTypeTextView     .setText(events.get(position).getFoodType());
+        holder.eventNameTextView.setText(events.get(position).getEventName());
+        holder.orgNameTextView.setText(events.get(position).getOrgName());
+        holder.locationTextView.setText(events.get(position).getLocation());
+        holder.timeTextView.setText(events.get(position).getTime());
+        holder.foodTypeTextView.setText(events.get(position).getFoodType());
         //TODO: attach the food image: (1) add the food pics (png) to drawable, (2) use if-else on foodTypeTextView to set the corresponding png
         //holder.foodImageView      .setText(events.get(position).getOrgName());
-        holder.likesCountTextView   .setText(events.get(position).getLikesCount() + " likes");
+        holder.likesCountTextView.setText(events.get(position).getLikesCount() + " likes");
 
         //Citation: the following block of code is inspired from this: https://stackoverflow.com/q/44093221
-
-       /* boolean isClicked = false;
-        holder.likeToggleBtn.setOnClickListener(buttonListener{
-
-
-        }); */
 
          holder.likeToggleBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton likedBtn, boolean isChecked) {
-                isChecked = true;
-                isChecked = false;
-                if (isChecked) {
+                if (isChecked)
                     likedBtn.setBackground(ContextCompat.getDrawable(likedBtn.getContext(),
                             R.drawable.ic_favorite_black_24dp));
 
 
-                }
                 else
                     likedBtn.setBackground(ContextCompat.getDrawable(likedBtn.getContext(),
                                                         R.drawable.ic_favorite_border_black_24dp));
             }
         });
+
         //TODO: bind the list of comments to this holder in a proper way - maybe learn from MovieGuide?
         holder.commentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
