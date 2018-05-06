@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.time.LocalDateTime;
+import java.util.Date;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -19,14 +22,16 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+
 public class RegistrationActivity extends AppCompatActivity {
 
-    private EditText userName, userPassword, userEmail, userAge;
+    private EditText userPassword;
+    private EditText userEmail;
     private Button regButton;
     private TextView userLogin;
     private FirebaseAuth firebaseAuth;
 
-    String email, name, age, password;
+    String email, name,password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +43,11 @@ public class RegistrationActivity extends AppCompatActivity {
 
         regButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
+                Toast.makeText(RegistrationActivity.this, "lol1123", Toast.LENGTH_LONG).show();
                 if(validate()){
+
                     ///Upload data to the database
                     String user_email = userEmail.getText().toString().trim();
                     String user_password = userPassword.getText().toString().trim();
@@ -51,12 +59,12 @@ public class RegistrationActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 sendEmailVerification();
                                 sendUserData();
-                                firebaseAuth.signOut();
-                                Toast.makeText(RegistrationActivity.this, "Successfully Registered, Upload complete!", Toast.LENGTH_SHORT).show();
-                                finish();
+                                Toast.makeText(RegistrationActivity.this, "it worked", Toast.LENGTH_LONG).show();
                                 startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
-                            }else{
-                                Toast.makeText(RegistrationActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                               finish();
+                            }
+                            else{
+                                Toast.makeText(RegistrationActivity.this, "Registration Failed. Please Try Again", Toast.LENGTH_SHORT).show();
                             }
 
                         }
@@ -75,26 +83,24 @@ public class RegistrationActivity extends AppCompatActivity {
     }
 
     private void setupUIViews(){
-        userName = (EditText)findViewById(R.id.etUserName);
+
         userPassword = (EditText)findViewById(R.id.etUserPassword);
         userEmail = (EditText)findViewById(R.id.etUserEmail);
         regButton = (Button)findViewById(R.id.btnRegister);
         userLogin = (TextView)findViewById(R.id.tvUserLogin);
-        userAge = (EditText)findViewById(R.id.etAge);
+
     }
 
     private Boolean validate(){
         Boolean result = false;
 
-        name = userName.getText().toString();
+
         password = userPassword.getText().toString();
         email = userEmail.getText().toString();
-        age = userAge.getText().toString();
 
-
-        if(name.isEmpty() || password.isEmpty() || email.isEmpty() || age.isEmpty()){
+        if(password.isEmpty() || email.isEmpty()){
             Toast.makeText(this, "Please enter all the details", Toast.LENGTH_SHORT).show();
-        }else{
+       }else{
             result = true;
         }
 
@@ -125,7 +131,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private void sendUserData(){
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
-        UserProfile userProfile = new UserProfile(age, email, name);
-        myRef.setValue(userProfile);
+        UserProfile userProfile = new UserProfile(email, name);
+        Comment comm = new Comment("Jordan", "Sup" , java.time.LocalDateTime.now());
+        myRef.setValue(comm);
     }
 }

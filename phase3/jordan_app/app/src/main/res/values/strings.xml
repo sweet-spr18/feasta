@@ -3,5 +3,10 @@
     <string name="LABEL">Feasta</string>
     <string name="app_intro">Welcome TO FEASTA. The one stop shop for all  you starving Johnnnies lookng to find events
     with free food.</string>
+    <string name="emailHint">"St. John's Email"</string>
+    <string name="passwordhint">Password</string>
+    <string name="loginBtn">"Find Free Food"</string>
+    <string name="newuserLink">"Want Free Food? Sign Up!!</string>
+    <string name="forgotPassword">"Oh No!! Did You Forget Your Password?"</string>
 
 </resources>

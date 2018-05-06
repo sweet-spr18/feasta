@@ -1,30 +1,19 @@
 package com.example.jmori156.finalfinalfinal;
 
-/**
- * Created by Dheeraj_Kamath on 2/10/2018.
- */
-
 public class UserProfile {
-    public String userAge;
     public String userEmail;
     public String userName;
 
     public UserProfile(){
     }
 
-    public UserProfile(String userAge, String userEmail, String userName) {
-        this.userAge = userAge;
+    public UserProfile(String userEmail, String userName) {
+
         this.userEmail = userEmail;
         this.userName = userName;
     }
 
-    public String getUserAge() {
-        return userAge;
-    }
 
-    public void setUserAge(String userAge) {
-        this.userAge = userAge;
-    }
 
     public String getUserEmail() {
         return userEmail;
