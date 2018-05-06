@@ -86,7 +86,7 @@ public class CommentsListingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String commentText = editComment.getText().toString();
-                commentList.add(new Comment(commentText, "Jing03", Calendar.getInstance().getTime().toString()));
+                commentList.add(new Comment(commentText, "Jing03", Calendar.getInstance().getTime()));
                 adapter.notifyDataSetChanged();
 
 

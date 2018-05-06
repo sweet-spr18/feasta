@@ -8,12 +8,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 public class CommentsListingAdapter extends RecyclerView.Adapter<CommentsListingAdapter.CommentDetailViewHolder>{
 
     private Context mContext;
     private List<Comment> commentList;
+    private SimpleDateFormat mDTFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+    //see rerference for formatter patterns here: https://developer.android.com/reference/java/text/SimpleDateFormat
 
 
     CommentsListingAdapter(Context mContext, List<Comment> commentList) {
@@ -38,7 +41,7 @@ public class CommentsListingAdapter extends RecyclerView.Adapter<CommentsListing
         //loading data
         holder.textViewCommentText.setText(comment.getCommentText());
         holder.textViewUserName.setText(comment.getUserName());
-        holder.textViewTimeStamp.setText(comment.getTimeStamp());
+        holder.textViewTimeStamp.setText(mDTFormatter.format(comment.getTimeStamp()));
     }
 
     @Override

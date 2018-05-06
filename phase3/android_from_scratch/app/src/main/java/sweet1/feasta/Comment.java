@@ -1,29 +1,41 @@
 package sweet1.feasta;
 
-//create class of cardview for recyclerview
+import java.util.Date;
+
 public class Comment
 {
     private String commentText;
     private String userName;
-    private String timeStamp;
+    private Date timeStamp;
 
     //create constructor
-    Comment(String commentText, String userName, String timeStamp) {
+    public Comment(String commentText, String userName, Date timeStamp) {
         this.commentText = commentText;
         this.userName = userName;
         this.timeStamp = timeStamp;
     }
 
-    //create get method for evert variables
     public String getCommentText() {
         return commentText;
+    }
+
+    public void setCommentText(String commentText) {
+        this.commentText = commentText;
     }
 
     public String getUserName() {
         return userName;
     }
 
-    public String getTimeStamp() {
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public Date getTimeStamp() {
         return timeStamp;
+    }
+
+    public void setTimeStamp(Date timeStamp) {
+        this.timeStamp = timeStamp;
     }
 }
