@@ -10,9 +10,8 @@ public class Location {
 
     private ArrayList<Event> events;
 
-
-    //TODO: drawble references do not work. Might have to convert all the images from jpg to png!
-    public Location(String name) {
+    public Location(String nm) {
+        this.name = nm;
         switch (name) {
             case "DAC":
                 setImageResID(R.drawable.dac);
@@ -95,4 +94,5 @@ public class Location {
     public void setEvents(ArrayList<Event> events) {
         this.events = events;
     }
+
 }

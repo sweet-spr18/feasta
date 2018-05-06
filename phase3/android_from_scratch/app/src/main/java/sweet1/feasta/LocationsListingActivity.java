@@ -1,26 +1,19 @@
 package sweet1.feasta;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
 
 public class LocationsListingActivity extends AppCompatActivity {
 
     Toolbar mToolbar;
     private RecyclerView mRecyclerView;
-    private EventsListingAdapter mAdapter;
+    private LocationsListingAdapter mAdapter;
     private Location[] locationArray;
 
 
@@ -29,26 +22,18 @@ public class LocationsListingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_locations_listing);
 
-        //TODO: implement this toolbar
+        //TODO: implement this toolbar i.e. the LogOut button
         mToolbar = (Toolbar) findViewById(R.id.locationsListingToolbar);
         setSupportActionBar(mToolbar);
 
-        /* Get a support ActionBar corresponding to this toolbar */
-        ActionBar ab = getSupportActionBar();
-
-        /* Enable the Up button *//* //TODO: THIS WILL NEED TO GO TO THE LocationsListing SCREEN ONCE WE HAVE THAT
-        assert ab != null;
-        ab.setDisplayHomeAsUpEnabled(true);*/
-
         String[] locNames = getResources().getStringArray(R.array.locations);
         locationArray = new Location[locNames.length];
-        //TODO: add items into locationArray
         for (int i = 0; i < locNames.length; i++) {
-            locationArray[i].setName(locNames[i]);
+            locationArray[i] = new Location(locNames[i]);
         }
 
         //initialize our Recycler and our Adapter
-        mRecyclerView = (RecyclerView) findViewById(R.id.eventsListingRecyclerView);
+        mRecyclerView = (RecyclerView) findViewById(R.id.locationsListingRecyclerView);
         mAdapter = new LocationsListingAdapter(locationArray);
 
         //set up the Recycler and the Adapter
@@ -56,14 +41,14 @@ public class LocationsListingActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(layoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
-        // Write a message to the database
+        //TODO: Retrieve event list for each location
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("message");
-
-        //myRef.setValue("Hello, World!");
+        //some code here
     }
 
-    @Override
+    //UNCOMMENT & EDIT THE FOLLOWING CODE IF NEED TO ADD OPTIONS TO THE TOOLBAR
+   /* @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_events_listing, menu);
@@ -98,5 +83,5 @@ public class LocationsListingActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
+    }*/
 }

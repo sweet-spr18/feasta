@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context=".EventsListingActivity">
+    tools:context=".LocationsListingActivity">
 
     <!-- THE TOOLBAR -->
     <android.support.v7.widget.Toolbar
-        android:id="@+id/eventsListingToolbar"
+        android:id="@+id/locationsListingToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
@@ -25,10 +25,10 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".EventsListingActivity">
+        tools:context=".LocationsListingActivity">
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/eventsListingRecyclerView"
+            android:id="@+id/locationsListingRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

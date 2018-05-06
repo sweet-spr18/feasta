@@ -18,7 +18,7 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ToolbarTheme"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:name="Edit Event" />
+        app:title="Edit Event" />
 
     <!-- THE FILLABLE FORM -->
     <android.support.constraint.ConstraintLayout
