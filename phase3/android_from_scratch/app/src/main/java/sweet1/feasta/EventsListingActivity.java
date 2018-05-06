@@ -35,9 +35,9 @@ public class EventsListingActivity extends AppCompatActivity {
         /* Get a support ActionBar corresponding to this toolbar */
         ActionBar ab = getSupportActionBar();
 
-        /* Enable the Up button *//* //TODO: THIS WILL NEED TO GO TO THE LocationsListing SCREEN ONCE WE HAVE THAT
+        /* Enable the Up button */
         assert ab != null;
-        ab.setDisplayHomeAsUpEnabled(true);*/
+        ab.setDisplayHomeAsUpEnabled(true);
 
         eventArrayList = new ArrayList<>();
         eventArrayList.add(new Event("event1", "org1", "DAC 409", "1:50 PM - 3:15 PM", "Pizza", 3, null));

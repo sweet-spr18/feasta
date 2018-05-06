@@ -39,7 +39,7 @@ public class LocationsListingAdapter extends RecyclerView.Adapter<LocationsListi
             @Override
             public void onClick(View v) {
                 Intent eventIntent = new Intent(v.getContext(), EventsListingActivity.class);
-                //commentIntent.putExtra("sweet1.feasta.THIS-EVENT", locations.get(position).getComments());
+                //eventIntent.putExtra("sweet1.feasta.THIS-LOCATION", locations[position].getEvents());
                 ContextCompat.startActivity(v.getContext(), eventIntent, null);
             }
         });
