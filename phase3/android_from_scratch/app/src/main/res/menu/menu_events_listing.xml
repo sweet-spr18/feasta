@@ -6,20 +6,20 @@
     <item
         android:id="@+id/action_edit"
         android:icon="@android:drawable/ic_menu_edit"
-        android:title="@string/action_edit"
+        android:name="@string/action_edit"
         app:showAsAction="always" />
 
     <!-- To create (add) a new event -->
     <item
         android:id="@+id/action_add"
         android:icon="@android:drawable/ic_menu_add"
-        android:title="@string/action_add"
+        android:name="@string/action_add"
         app:showAsAction="always" />
 
     <!-- To log out -->
     <item
         android:id="@+id/action_logout"
-        android:title="@string/action_logout"
+        android:name="@string/action_logout"
         app:showAsAction="always" />
 
 

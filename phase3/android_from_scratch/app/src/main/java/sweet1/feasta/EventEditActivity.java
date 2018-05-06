@@ -8,8 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class EventEditActivity extends AppCompatActivity {
@@ -18,6 +20,7 @@ public class EventEditActivity extends AppCompatActivity {
     private ImageButton selectImage;
     private EditText name;
     private EditText description;
+    private Spinner location;
     private static final int Gallery_Pick= 1;
 
     @Override
@@ -38,7 +41,12 @@ public class EventEditActivity extends AppCompatActivity {
         selectImage = (ImageButton) findViewById(R.id.select_image);
         name = (EditText) findViewById(R.id.event_name);
         description = (EditText) findViewById(R.id.event_description);
+        location = (Spinner) findViewById(R.id.location);
 
+        ArrayAdapter<String> locationAdapter = new ArrayAdapter<String>(EventEditActivity.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.locations));
+        locationAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        location.setAdapter(locationAdapter);
         selectImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -17,7 +17,7 @@
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ToolbarTheme"
-        app:title="@string/app_name"
+        app:name="@string/app_name"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <!-- THE LISTING -->

@@ -32,7 +32,7 @@
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ToolbarTheme"
-        app:title="Comments"
+        app:name="Comments"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <!-- THE LIST OF COMMENTS START HERE -->

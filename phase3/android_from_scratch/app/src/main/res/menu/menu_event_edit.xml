@@ -5,7 +5,7 @@
     <!-- To publish (save) the changes to an event -->
     <item
         android:id="@+id/action_publish"
-        android:title="@string/action_publish"
+        android:name="@string/action_publish"
         app:showAsAction="always" />
 
 
