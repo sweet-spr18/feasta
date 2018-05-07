@@ -25,7 +25,11 @@ public class EventsListingActivity extends AppCompatActivity {
     Toolbar mToolbar;
     private RecyclerView mRecyclerView;
     private EventsListingAdapter mAdapter;
-    private ArrayList<Event> eventArrayList;
+    public ArrayList<Event> eventArrayList;
+
+    public ArrayList<Event> getEventList(){
+        return eventArrayList;
+    }
 
 
     @Override
@@ -109,6 +113,8 @@ public class EventsListingActivity extends AppCompatActivity {
         }
 
     }
+    //Pulling data for the froze bar
+    //public
 
     private void showAlert() {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);

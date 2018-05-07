@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +27,13 @@ public class CommentsListingActivity extends AppCompatActivity {
     private CommentsListingAdapter adapter;
     private RecyclerView recyclerView;
     private List<Comment> commentList;
+    private String Event_Details;
+
+    private String FoodType;
+    private String eventName;
+    private String Location;
+    private String Time;
+
 
     // Write a message to the database
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -47,16 +56,20 @@ public class CommentsListingActivity extends AppCompatActivity {
         //initialize an empty commentBtn list
         commentList = new ArrayList<>();
 
-        //check if the Intent that led to this activity has the Extra named as such
-        if (getIntent().hasExtra("sweet1.feasta.THIS-EVENT")) {
-            List<Comment> commentsBelongingToThisEvent = (List<Comment>) getIntent().getExtras().get("sweet1.feasta.THIS-EVENT");
-            commentList.addAll(commentsBelongingToThisEvent);
-        }
+        //Passing of Event Details
+        Event_Details = (String) getIntent().getExtras().get("Details");
+        assignDetails(Event_Details);
         /*//demo items to add to the list
         commentList.add(new Comment("Good Food", "Jing01", "05/03/2018"));
         commentList.add(new Comment("Food are good and the event are nice too",
                 "Jing02", "05/02/2018"));*/
 
+
+        //Adding details
+        LinearLayout lView = (LinearLayout)findViewById(R.id.textViewLayout);
+        LinearLayout lView2 = (LinearLayout)findViewById(R.id.textView2Layout);
+        LinearLayout lView3 = (LinearLayout)findViewById(R.id.textView3Layout);
+        LinearLayout lView4 = (LinearLayout)findViewById(R.id.textView4Layout);
 
         /* DISPLAY THE EXISTING COMMENTS */
 
@@ -94,6 +107,15 @@ public class CommentsListingActivity extends AppCompatActivity {
         });
     }
 
+    private void assignDetails(String event_details)
+    {
+        String[] seprated = event_details.split("|");
+        FoodType = seprated[0];
+        Location = seprated[1];
+        eventName= seprated[2];
+        Time= seprated[3];
+    }
+
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_edit:
@@ -106,8 +128,11 @@ public class CommentsListingActivity extends AppCompatActivity {
 
             default:
                 return super.onOptionsItemSelected(item);
-
-
         }
+    }
+
+    public void showEventDetails()
+    {
+
     }
 }

@@ -37,14 +37,14 @@ public class EventsListingAdapter extends RecyclerView.Adapter<EventsListingAdap
     @Override
     public void onBindViewHolder(final EventViewHolder holder, final int position) {
         final int pos = position;
-        holder.eventNameTextView.setText(events.get(position).getEventName());
-        holder.orgNameTextView.setText(events.get(position).getOrgName());
-        holder.locationTextView.setText(events.get(position).getLocation());
-        holder.timeTextView.setText(events.get(position).getTime());
-        holder.foodTypeTextView.setText(events.get(position).getFoodType());
+        holder.eventNameTextView.setText(events.get(pos).getEventName());
+        holder.orgNameTextView.setText(events.get(pos).getOrgName());
+        holder.locationTextView.setText(events.get(pos).getLocation());
+        holder.timeTextView.setText(events.get(pos).getTime());
+        holder.foodTypeTextView.setText(events.get(pos).getFoodType());
         //TODO: attach the food image: (1) add the food pics (png) to drawable, (2) use if-else on foodTypeTextView to set the corresponding png
         //holder.foodImageView      .setText(events.get(position).getOrgName());
-        holder.likesCountTextView.setText(events.get(position).getLikesCount() + " likes");
+        holder.likesCountTextView.setText(events.get(pos).getLikesCount() + " likes");
 
         //Citation: the following block of code is inspired from this: https://stackoverflow.com/q/44093221
 
@@ -67,7 +67,7 @@ public class EventsListingAdapter extends RecyclerView.Adapter<EventsListingAdap
             @Override
             public void onClick(View v) {
                 Intent commentIntent = new Intent(v.getContext(), CommentsListingActivity.class);
-                //commentIntent.putExtra("sweet1.feasta.THIS-EVENT", events.get(position).getComments());
+                        commentIntent.putExtra("Details", events.get(pos).getFoodType()+ "|" + events.get(pos).getEventName() + "|" + events.get(pos).getLocation() + "|" + events.get(pos).getTime());
                 ContextCompat.startActivity(v.getContext(), commentIntent, null);
             }
         });
@@ -78,8 +78,8 @@ public class EventsListingAdapter extends RecyclerView.Adapter<EventsListingAdap
         return events.size();
     }
 
-    class EventViewHolder extends RecyclerView.ViewHolder {
-
+    class EventViewHolder extends RecyclerView.ViewHolder
+    {
         TextView eventNameTextView, orgNameTextView, locationTextView, timeTextView,
                  foodTypeTextView, likesCountTextView;
         ImageView foodImageView;

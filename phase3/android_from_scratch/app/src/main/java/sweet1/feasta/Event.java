@@ -2,7 +2,9 @@ package sweet1.feasta;
 
 import java.util.List;
 
-public class Event {
+public class Event
+
+{
     private String eventName;
     private String orgName;
     private String location;
