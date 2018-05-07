@@ -7,23 +7,6 @@
     android:orientation="vertical"
     tools:context="sweet1.feasta.CommentsListingActivity">
 
-    <!-- THIS BOX CONTAINS SUMMARY OF EVENT DETAILS -->
-    <!-- WILL BE "FROZEN" SO THAT IT's ALWAYS VISIBLE EVEN IF USER SCROLLS DOWN -->
-    <!--<android.support.design.widget.AppBarLayout
-
-        android:id="@+id/AppBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/white"
-        android:fitsSystemWindows="true">
-
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="85dp"
-            android:fitsSystemWindows="true"></android.support.design.widget.CollapsingToolbarLayout>
-
-    </android.support.design.widget.AppBarLayout>-->
-
     <android.support.v7.widget.Toolbar
         android:id="@+id/commentsListingToolbar"
         android:layout_width="match_parent"
