@@ -1,43 +1,32 @@
 package com.example.jmori156.finalfinalfinal;
 
-import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.List;
 
 public class Event {
-    private int eventId;
-    private int locationId;
-
-    private int orgPhoto;
+    private String eventName;
     private String orgName;
-    private String eventLocation;
-    private String eventTime;
-    private int eventPhoto;
+    private String location;
+    private String time;
+    private String foodType;
+    private int likesCount;
+    private List<Comment> comments;
 
-    private HashSet<Integer> likes;
-    private ArrayList<Comment> comments;
-
-    public int getEventId() {
-        return eventId;
+    public Event(String eventName, String orgName, String location, String time, String foodType, int likesCount, List<Comment> comments) {
+        this.eventName = eventName;
+        this.orgName = orgName;
+        this.location = location;
+        this.time = time;
+        this.foodType = foodType;
+        this.likesCount = likesCount;
+        this.comments = comments;
     }
 
-    public void setEventId(int eventId) {
-        this.eventId = eventId;
+    public String getEventName() {
+        return eventName;
     }
 
-    public int getLocationId() {
-        return locationId;
-    }
-
-    public void setLocationId(int locationId) {
-        this.locationId = locationId;
-    }
-
-    public int getOrgPhoto() {
-        return orgPhoto;
-    }
-
-    public void setOrgPhoto(int orgPhoto) {
-        this.orgPhoto = orgPhoto;
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
     }
 
     public String getOrgName() {
@@ -48,43 +37,43 @@ public class Event {
         this.orgName = orgName;
     }
 
-    public String getEventLocation() {
-        return eventLocation;
+    public String getLocation() {
+        return location;
     }
 
-    public void setEventLocation(String eventLocation) {
-        this.eventLocation = eventLocation;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public String getEventTime() {
-        return eventTime;
+    public String getTime() {
+        return time;
     }
 
-    public void setEventTime(String eventTime) {
-        this.eventTime = eventTime;
+    public void setTime(String time) {
+        this.time = time;
     }
 
-    public int getEventPhoto() {
-        return eventPhoto;
+    public String getFoodType() {
+        return foodType;
     }
 
-    public void setEventPhoto(int eventPhoto) {
-        this.eventPhoto = eventPhoto;
+    public void setFoodType(String foodType) {
+        this.foodType = foodType;
     }
 
-    public HashSet<Integer> getLikes() {
-        return likes;
+    public int getLikesCount() {
+        return likesCount;
     }
 
-    public void setLikes(HashSet<Integer> likes) {
-        this.likes = likes;
+    public void setLikesCount(int likesCount) {
+        this.likesCount = likesCount;
     }
 
-    public ArrayList<Comment> getComments() {
+    public List<Comment> getComments() {
         return comments;
     }
 
-    public void setComments(ArrayList<Comment> comments) {
+    public void setComments(List<Comment> comments) {
         this.comments = comments;
     }
 }

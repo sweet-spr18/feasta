@@ -21,7 +21,12 @@
         <activity android:name=".PasswordActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".UpdateProfile" />
-        <activity android:name=".UpdatePassword"></activity>
+        <activity android:name=".EventEditActivity" />
+        <activity android:name=".EventsListingActivity" />
+        <activity android:name=".LocationsListingActivity" />
+        <activity android:name=".UpdatePassword">
+
+        </activity>
     </application>
 
 </manifest>

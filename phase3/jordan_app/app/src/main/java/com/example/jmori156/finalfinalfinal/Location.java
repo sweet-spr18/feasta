@@ -11,20 +11,29 @@ public class Location {
 
     private ArrayList<Event> events;
 
-//    public Location(int pos){
-//        switch(pos) {
-//            case 0: setImage(R.drawable.dac);
-//                setTitle("DAC");
-//                break;
-//            case 1: setImage(R.drawable.lib);
-//                setTitle("LIB");
-//                break;
-//            case 2: setImage(R.drawable.sjh);
-//                setTitle("SJH");
-//                break;
-//        }
-//    }
+    public Location(int pos){
+        switch(pos) {
+            case 0: setImage(R.drawable.dac);
+                setTitle("DAC");
+                break;
+            case 1: setImage(R.drawable.lib);
+                setTitle("LIB");
+                break;
+            case 2: setImage(R.drawable.sjh);
+                setTitle("SJH");
+                break;
+        }
+    }
 
+    public String getName()
+    {
+        return title;
+    }
+
+    public int getImageResID()
+    {
+        return image;
+    }
     public int getLocationId() {
         return locationId;
     }

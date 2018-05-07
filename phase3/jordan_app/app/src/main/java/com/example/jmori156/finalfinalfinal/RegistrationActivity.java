@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.Date;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -132,7 +133,7 @@ public class RegistrationActivity extends AppCompatActivity {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
         UserProfile userProfile = new UserProfile(email, name);
-        Comment comm = new Comment("Jordan", "Sup" , java.time.LocalDateTime.now());
+        Comment comm = new Comment("Jordan", "Sup" , Calendar.getInstance().getTime());
         myRef.setValue(comm);
     }
 }

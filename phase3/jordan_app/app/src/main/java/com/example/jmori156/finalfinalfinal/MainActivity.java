@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 validate(Email.getText().toString(), Password.getText().toString());
+                startActivity(new Intent(MainActivity.this, LocationsListingActivity.class));
             }
         });
 

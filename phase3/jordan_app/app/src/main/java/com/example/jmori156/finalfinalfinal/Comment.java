@@ -3,52 +3,25 @@ package com.example.jmori156.finalfinalfinal;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-public class Comment {
-    private int commentId;
-    private int eventId;
-
-
-    private LocalDateTime timePosted;
-    private String text;
+public class Comment
+{
+    private String commentText;
     private String userName;
+    private Date timeStamp;
 
-    public Comment(String userName, String text, LocalDateTime time)
-    {
+    //create constructor
+    public Comment(String commentText, String userName, Date timeStamp) {
+        this.commentText = commentText;
         this.userName = userName;
-        this.text = text;
-        this.timePosted = time;
+        this.timeStamp = timeStamp;
     }
 
-    public int getCommentId() {
-        return commentId;
+    public String getCommentText() {
+        return commentText;
     }
 
-    public void setCommentId(int commentId) {
-        this.commentId = commentId;
-    }
-
-    public int getEventId() {
-        return eventId;
-    }
-
-    public void setEventId(int eventId) {
-        this.eventId = eventId;
-    }
-
-    public LocalDateTime getTimePosted() {
-        return timePosted;
-    }
-
-    public void setTimePosted(LocalDateTime timePosted) {
-        this.timePosted = timePosted;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
+    public void setCommentText(String commentText) {
+        this.commentText = commentText;
     }
 
     public String getUserName() {
@@ -57,5 +30,22 @@ public class Comment {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public Date getTimeStamp() {
+        return timeStamp;
+    }
+
+    public void setTimeStamp(Date timeStamp) {
+        this.timeStamp = timeStamp;
+    }
+
+    public String getText()
+    {
+        return commentText;
+    }
+    public Date getTime()
+    {
+        return timeStamp;
     }
 }
