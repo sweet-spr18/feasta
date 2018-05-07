@@ -7,8 +7,7 @@
     android:orientation="vertical"
     tools:context="sweet1.feasta.CommentsListingActivity">
 
-    <!-- THIS BOX CONTAINS SUMMARY OF EVENT DETAILS -->
-    <!-- WILL BE "FROZEN" SO THAT IT's ALWAYS VISIBLE EVEN IF USER SCROLLS DOWN -->
+
     <!--<android.support.design.widget.AppBarLayout
 
         android:id="@+id/AppBarLayout"
@@ -23,7 +22,6 @@
             android:fitsSystemWindows="true"></android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>-->
-
     <android.support.v7.widget.Toolbar
         android:id="@+id/commentsListingToolbar"
         android:layout_width="match_parent"
@@ -32,10 +30,71 @@
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ToolbarTheme"
-        app:title="Comments"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Comments" />
+
+    <!-- THIS BOX CONTAINS SUMMARY OF EVENT DETAILS -->
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="11dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="29dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="108dp"
+            android:layout_height="91dp"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="11dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food Type: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Event: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time: " />
+        </LinearLayout>
+    </LinearLayout>
 
     <!-- THE LIST OF COMMENTS START HERE -->
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="11dp" />
+
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -84,10 +143,10 @@
             android:id="@+id/PostBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="16dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
             android:text="@string/button_post_a_comment"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
