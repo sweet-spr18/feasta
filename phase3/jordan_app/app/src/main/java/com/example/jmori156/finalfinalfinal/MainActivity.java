@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                validate1(Email.getText().toString(), Password.getText().toString());
+                validate(Email.getText().toString(), Password.getText().toString());
                 startActivity(new Intent(MainActivity.this, LocationsListingActivity.class));
 
             }
@@ -130,42 +130,7 @@ public class MainActivity extends AppCompatActivity
 
 
     }
-    private void validate1(String email, String userPassword) {
-        firebaseAuth.signInWithEmailAndPassword(email, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>()
-                        {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task)
-                            {
-                                if (!task.isSuccessful())
-                                {
-                                    try
-                                    {
-                                        throw task.getException();
-                                    }
-                                    // if user enters wrong email.
-                                    catch (FirebaseAuthInvalidUserException invalidEmail)
-                                    {
-                                        Log.d(TAG, "onComplete: invalid_email");
 
-
-                                    }
-                                    // if user enters wrong password.
-                                    catch (FirebaseAuthInvalidCredentialsException wrongPassword)
-                                    {
-                                        Log.d(TAG, "onComplete: wrong_password");
-
-                                        // TODO: Take your action
-                                    }
-                                    catch (Exception e)
-                                    {
-                                        Log.d(TAG, "onComplete: " + e.getMessage());
-                                    }
-                                }
-                            }
-                        }
-                );
-
-    }
 
 
 

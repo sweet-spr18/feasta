@@ -32,6 +32,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+
 public class EventEditActivity extends AppCompatActivity {
 
     Toolbar mToolbar;
@@ -53,8 +54,8 @@ public class EventEditActivity extends AppCompatActivity {
     //Time and Date picker variables
     private TextView mDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
-    private TextView mDisplayTime;
-    private TimePickerDialog.OnTimeSetListener mTimeSetListener;
+    private TextView mDisplayTime, mDisplayTime2;
+    private TimePickerDialog.OnTimeSetListener mTimeSetListener, mTimeSetListener2;
 
     //Database variables
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -67,6 +68,7 @@ public class EventEditActivity extends AppCompatActivity {
 
         postImageRef = database.getReference();
 
+
         mToolbar = (Toolbar) findViewById(R.id.eventEditToolbar);
         setSupportActionBar(mToolbar);
 
@@ -76,11 +78,6 @@ public class EventEditActivity extends AppCompatActivity {
         /* Enable the Up button */
         assert ab != null;
         ab.setDisplayHomeAsUpEnabled(true);
-
-        selectImage = (ImageButton) findViewById(R.id.select_image);
-        name = (EditText) findViewById(R.id.event_name);
-        description = (EditText) findViewById(R.id.event_description);
-        location = (Spinner) findViewById(R.id.location);
 
         //Link layout view elements
         selectImage = (ImageButton) findViewById(R.id.select_image);
@@ -149,6 +146,28 @@ public class EventEditActivity extends AppCompatActivity {
                 mDisplayTime.setText(time);
             }
         };
+        mDisplayTime2 = (TextView) findViewById(R.id.time_picker2);
+        mDisplayTime2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Calendar cal = Calendar.getInstance();
+                int hour = cal.get(Calendar.HOUR_OF_DAY);
+                int min = cal.get(Calendar.MINUTE);
+
+                TimePickerDialog dialog = new TimePickerDialog(EventEditActivity.this,
+                        android.R.style.Theme_Holo_Light_Dialog, mTimeSetListener2,
+                        hour, min, DateFormat.is24HourFormat(EventEditActivity.this));
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+        mTimeSetListener2 = new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                String time = (hourOfDay + ":" + minute);
+                mDisplayTime2.setText(time);
+            }
+        };
 
 
     }
@@ -187,24 +206,6 @@ public class EventEditActivity extends AppCompatActivity {
         }
     }
 
-    //TODO:-----NEEDS WORK---- USED THIS LINK BUT CAN'T GET HIS IMPORTS --- https://www.youtube.com/watch?v=N3npOixl9fk
-    private void ImageToFirebase(){
-        Calendar callForDate = Calendar.getInstance();
-        SimpleDateFormat currentDate = new SimpleDateFormat("dd-MMMM-yyyy");
-        saveCurrDate = currentDate.format(callForDate.getTime());
-
-        Calendar callForTime = Calendar.getInstance();
-        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm");
-        saveCurrTime = currentTime.format(callForDate.getTime());
-
-        postRandomName = saveCurrDate + saveCurrTime;
-
-        DatabaseReference filePath = postImageRef.child("Post Images").child(selectImageUri.getLastPathSegment() + postRandomName + ".jpg");
-        //filePath.push(selectImageUri).addValueEventListener().
-
-
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         mToolbar = (Toolbar) findViewById(R.id.eventEditToolbar);
@@ -223,6 +224,24 @@ public class EventEditActivity extends AppCompatActivity {
         return true;
     }
 
+
+    //TODO:-----NEEDS WORK---- USED THIS LINK BUT CAN'T GET HIS IMPORTS --- https://www.youtube.com/watch?v=N3npOixl9fk
+    private void ImageToFirebase(){
+        Calendar callForDate = Calendar.getInstance();
+        SimpleDateFormat currentDate = new SimpleDateFormat("dd-MMMM-yyyy");
+        saveCurrDate = currentDate.format(callForDate.getTime());
+
+        Calendar callForTime = Calendar.getInstance();
+        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm");
+        saveCurrTime = currentTime.format(callForDate.getTime());
+
+        postRandomName = saveCurrDate + saveCurrTime;
+
+        DatabaseReference filePath = postImageRef.child("Post Images").child(selectImageUri.getLastPathSegment() + postRandomName + ".jpg");
+        //filePath.push(selectImageUri).addValueEventListener().
+
+
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

@@ -1,5 +1,6 @@
 package com.example.jmori156.finalfinalfinal;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
@@ -48,17 +49,19 @@ public class EventsListingAdapter extends RecyclerView.Adapter<EventsListingAdap
 
         //Citation: the following block of code is inspired from this: https://stackoverflow.com/q/44093221
 
-         holder.likeToggleBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        holder.likeToggleBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton likedBtn, boolean isChecked) {
-                if (isChecked)
-                    likedBtn.setBackground(ContextCompat.getDrawable(likedBtn.getContext(),
+                Context thisContext = likedBtn.getContext();
+                if (isChecked) {
+                    likedBtn.setBackground(ContextCompat.getDrawable(thisContext,
                             R.drawable.ic_favorite_black_24dp));
-
+                    //holder.likesCountTextView.setText(thisContext.events.get(position).setLikesCount(getLikesCount()+1) + " likes");
+                }
 
                 else
                     likedBtn.setBackground(ContextCompat.getDrawable(likedBtn.getContext(),
-                                                        R.drawable.ic_favorite_border_black_24dp));
+                            R.drawable.ic_favorite_border_black_24dp));
             }
         });
 
@@ -81,7 +84,7 @@ public class EventsListingAdapter extends RecyclerView.Adapter<EventsListingAdap
     class EventViewHolder extends RecyclerView.ViewHolder {
 
         TextView eventNameTextView, orgNameTextView, locationTextView, timeTextView,
-                 foodTypeTextView, likesCountTextView;
+                foodTypeTextView, likesCountTextView;
         ImageView foodImageView;
         ToggleButton likeToggleBtn;
         Button commentBtn;
