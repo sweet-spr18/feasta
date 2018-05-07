@@ -43,7 +43,7 @@ public class EventAddActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event_edit);
+        setContentView(R.layout.activity_event_add);
 
         postImageRef = database.getReference();
 
@@ -83,10 +83,11 @@ public class EventAddActivity extends AppCompatActivity {
         }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
         super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == Gallery_Pick && resultCode ==RESULT_OK && data != null){
+        if (requestCode == Gallery_Pick && resultCode ==RESULT_OK && data != null)
+        {
             selectImageUri = data.getData();
             selectImage.setImageURI(selectImageUri);
         }
