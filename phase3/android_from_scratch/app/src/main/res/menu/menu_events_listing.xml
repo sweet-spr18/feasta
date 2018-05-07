@@ -17,15 +17,10 @@
         android:title="@string/action_add"
         app:showAsAction="always" />
 
-
-    <!-- To log out -->
+    <!-- For user to logout. -->
     <item
-        android:id="@+id/action_logout"
-        android:title="logout"
-        app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
-        app:showAsAction="always"
-        tools:icon="@drawable/mr_button_light" />
-
-
-
+    android:id="@+id/action_logout"
+    android:title="Logout"
+    app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
+    app:showAsAction="always" />
 </menu>

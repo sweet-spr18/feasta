@@ -1,5 +1,7 @@
 package sweet1.feasta;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -89,16 +91,37 @@ public class EventsListingActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_logout:
-                Intent showalert =
-                        new Intent(getApplicationContext(), ShowAlert.class);
-                startActivity(showalert);
+                showAlert();
                 return true;
 
             default:
                 return super.onOptionsItemSelected(item);
         }
+
     }
 
-
+    private void showAlert() {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder
+                    .setTitle("Logout")
+                    .setMessage("Are you sure you want to logout?")
+                    .setCancelable(false)
+                    .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                    {
+                        public void onClick(DialogInterface dialog, int id)
+                        {
+                            dialog.cancel();
+                        }
+                    })
+                    .setNegativeButton("No", new DialogInterface.OnClickListener()
+                    {
+                        public void onClick(DialogInterface dialog, int id)
+                        {
+                            dialog.cancel();
+                        }
+                    });
+            AlertDialog alert = builder.create();
+            alert.show();
+    }
 
 }

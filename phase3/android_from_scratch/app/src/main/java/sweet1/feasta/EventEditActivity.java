@@ -155,8 +155,6 @@ public class EventEditActivity extends AppCompatActivity {
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
-
-
         }
     }
 }

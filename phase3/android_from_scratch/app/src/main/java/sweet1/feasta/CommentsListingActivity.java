@@ -106,11 +106,6 @@ public class CommentsListingActivity extends AppCompatActivity {
                 startActivity(backToEvent);
                 return true;
 
-            //TODO: add an image - either by taking a photo or select from pre-built gallery
-            //TODO: if taking a photo, use Intent.ACTION_IMAGE_CAPTURE, as seen here:
-            //https://developer.android.com/guide/components/intents-common#Camera
-            //TODO: if getting a prebuilt photo, maybe see this link?
-            //https://developer.android.com/guide/components/intents-common#Storage
             default:
                 return super.onOptionsItemSelected(item);
 
