@@ -24,7 +24,7 @@ import java.util.Calendar;
 
 
 public class EventEditActivity extends AppCompatActivity {
-
+//TODO add and modify this class to only allow creators to edit their event.
     Toolbar mToolbar;
     private ImageButton selectImage;
     private EditText name;

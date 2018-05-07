@@ -44,8 +44,6 @@ public class CommentsListingActivity extends AppCompatActivity {
         assert ab != null;
         ab.setDisplayHomeAsUpEnabled(true);
 
-        //TODO: the "frozen" bar (under the normal App Bar) showing the Event Details (see mockup.png on GitHub), see the activity_comments_listing.xml
-
         //initialize an empty commentBtn list
         commentList = new ArrayList<>();
 

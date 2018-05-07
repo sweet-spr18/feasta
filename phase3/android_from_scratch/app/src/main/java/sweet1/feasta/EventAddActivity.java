@@ -1,4 +1,5 @@
 package sweet1.feasta;
+//TODO add and modify this class to only allow creators to add their event.
 
 import android.content.Intent;
 import android.net.Uri;
@@ -140,8 +141,6 @@ public class EventAddActivity extends AppCompatActivity {
 
         DatabaseReference filePath = postImageRef.child("Post Images").child(selectImageUri.getLastPathSegment() + postRandomName + ".jpg");
         //filePath.push(selectImageUri).addValueEventListener().
-
-
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
