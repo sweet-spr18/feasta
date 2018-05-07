@@ -1,18 +1,17 @@
 package com.example.jmori156.finalfinalfinal;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
+import com.example.jmori156.finalfinalfinal.CommentsListingAdapter;
+import com.example.jmori156.finalfinalfinal.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -26,6 +25,7 @@ public class CommentsListingActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List<Comment> commentList;
 
+    private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
     // Write a message to the database
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference("comment");
@@ -88,33 +88,15 @@ public class CommentsListingActivity extends AppCompatActivity {
                 String commentText = editComment.getText().toString();
                 commentList.add(new Comment(commentText, "Jing03", Calendar.getInstance().getTime()));
                 adapter.notifyDataSetChanged();
+                /*writeNewComment(String userId, Sring name, String email) {
+                    User user = new User(name, email);
+                    mDatabase.child("users").child(userId).setValue(user);
+                }*/
 
-
-                myRef.setValue(commentText);
+                myRef.setValue(commentText); //this is basic write ; available JSON types: String, Long, Double, Boolean, Map<String, Object>, List<Object>, or a custom Java object if the class defining it has a default constructor that takes no arguments and public getters
                 editComment.setText(null);
             }
         });
     }
 
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_edit:
-                //TODO: publish the event (i.e. add to database)
-                Toast.makeText(CommentsListingActivity.this, "", Toast.LENGTH_LONG).show();
-                Intent backToEvent =
-                        new Intent(getApplicationContext(), EventsListingActivity.class);
-                startActivity(backToEvent);
-                return true;
-
-            //TODO: add an image - either by taking a photo or select from pre-built gallery
-            //TODO: if taking a photo, use Intent.ACTION_IMAGE_CAPTURE, as seen here:
-            //https://developer.android.com/guide/components/intents-common#Camera
-            //TODO: if getting a prebuilt photo, maybe see this link?
-            //https://developer.android.com/guide/components/intents-common#Storage
-            default:
-                return super.onOptionsItemSelected(item);
-
-
-        }
-    }
 }

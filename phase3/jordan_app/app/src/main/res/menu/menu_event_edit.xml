@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-<!-- To publish (save) the changes to an event -->
-<item
-    android:id="@+id/action_publish"
-    android:name="@string/action_publish"
-    app:showAsAction="always" />
+    <!-- To publish (save) the changes to an event -->
+    <item
+        android:id="@+id/action_publish"
+        android:name="@string/action_publish"
+        app:showAsAction="always"
+        tools:ignore="MenuTitle" />
 
 
 

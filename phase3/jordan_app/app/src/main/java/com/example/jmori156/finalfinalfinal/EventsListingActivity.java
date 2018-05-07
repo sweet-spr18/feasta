@@ -36,7 +36,6 @@ public class EventsListingActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.eventsListingToolbar);
         setSupportActionBar(mToolbar);
 
-
         /* Get a support ActionBar corresponding to this toolbar */
         ActionBar ab = getSupportActionBar();
 
@@ -44,7 +43,7 @@ public class EventsListingActivity extends AppCompatActivity {
         assert ab != null;
         ab.setDisplayHomeAsUpEnabled(true);
 
-        firebaseAuth = firebaseAuth.getInstance();
+         firebaseAuth = FirebaseAuth.getInstance();
 
         eventArrayList = new ArrayList<>();
         eventArrayList.add(new Event("event1", "org1", "DAC 409", "1:50 PM - 3:15 PM", "Pizza", 3, null));

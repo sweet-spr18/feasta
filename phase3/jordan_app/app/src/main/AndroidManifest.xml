@@ -21,11 +21,48 @@
         <activity android:name=".PasswordActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".UpdateProfile" />
-        <activity android:name=".EventEditActivity" />
-        <activity android:name=".EventsListingActivity" />
-        <activity android:name=".LocationsListingActivity" />
-        <activity android:name=".UpdatePassword">
+        <activity android:name=".UpdatePassword"/>
 
+        <!-- LOCATIONS LISTING SCREEN -->
+        <activity android:name=".LocationsListingActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <!-- EVENTS LISTING SCREEN -->
+        <activity android:name=".EventsListingActivity"
+            android:parentActivityName=".LocationsListingActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LocationsListingActivity"/>
+        </activity>
+
+
+        <!-- EVENT EDIT SCREEN -->
+        <activity
+            android:name=".EventEditActivity"
+            android:parentActivityName=".EventsListingActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EventsListingActivity"/>
+        </activity>
+
+        <!-- PER-EVENT COMMENTS LISTING SCREEN -->
+        <activity
+            android:name=".CommentsListingActivity"
+            android:parentActivityName=".EventsListingActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EventsListingActivity"/>
         </activity>
     </application>
 

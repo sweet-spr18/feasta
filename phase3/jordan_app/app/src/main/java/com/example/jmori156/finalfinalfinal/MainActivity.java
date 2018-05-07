@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                validate(Email.getText().toString(), Password.getText().toString());
+                validate1(Email.getText().toString(), Password.getText().toString());
                 startActivity(new Intent(MainActivity.this, LocationsListingActivity.class));
 
             }
@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity
                                     {
                                         Log.d(TAG, "onComplete: invalid_email");
 
-                                        // TODO: take your actions!
+
                                     }
                                     // if user enters wrong password.
                                     catch (FirebaseAuthInvalidCredentialsException wrongPassword)
