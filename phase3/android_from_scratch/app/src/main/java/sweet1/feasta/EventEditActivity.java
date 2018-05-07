@@ -52,8 +52,8 @@ public class EventEditActivity extends AppCompatActivity {
     //Time and Date picker variables
     private TextView mDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
-    private TextView mDisplayTime;
-    private TimePickerDialog.OnTimeSetListener mTimeSetListener;
+    private TextView mDisplayTime, mDisplayTime2;
+    private TimePickerDialog.OnTimeSetListener mTimeSetListener, mTimeSetListener2;
 
     //Database variables
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -142,6 +142,28 @@ public class EventEditActivity extends AppCompatActivity {
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                 String time = (hourOfDay + ":" + minute);
                 mDisplayTime.setText(time);
+            }
+        };
+        mDisplayTime2 = (TextView) findViewById(R.id.time_picker2);
+        mDisplayTime2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Calendar cal = Calendar.getInstance();
+                int hour = cal.get(Calendar.HOUR_OF_DAY);
+                int min = cal.get(Calendar.MINUTE);
+
+                TimePickerDialog dialog = new TimePickerDialog(EventEditActivity.this,
+                        android.R.style.Theme_Holo_Light_Dialog, mTimeSetListener2,
+                        hour, min, DateFormat.is24HourFormat(EventEditActivity.this));
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+        mTimeSetListener2 = new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                String time = (hourOfDay + ":" + minute);
+                mDisplayTime2.setText(time);
             }
         };
 

@@ -1,5 +1,6 @@
 package sweet1.feasta;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
@@ -51,10 +52,12 @@ public class EventsListingAdapter extends RecyclerView.Adapter<EventsListingAdap
          holder.likeToggleBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton likedBtn, boolean isChecked) {
-                if (isChecked)
-                    likedBtn.setBackground(ContextCompat.getDrawable(likedBtn.getContext(),
+                Context thisContext = likedBtn.getContext();
+                if (isChecked) {
+                    likedBtn.setBackground(ContextCompat.getDrawable(thisContext,
                             R.drawable.ic_favorite_black_24dp));
-
+                    //holder.likesCountTextView.setText(thisContext.events.get(position).setLikesCount(getLikesCount()+1) + " likes");
+                }
 
                 else
                     likedBtn.setBackground(ContextCompat.getDrawable(likedBtn.getContext(),
