@@ -89,11 +89,16 @@ public class EventsListingActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_logout:
-                //TODO: make a popup message asking "Do you want to log out?" "Yes" "No"
-                //TODO: then log out or come back to the current screen
+                Intent showalert =
+                        new Intent(getApplicationContext(), ShowAlert.class);
+                startActivity(showalert);
+                return true;
 
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+
+
+
 }
