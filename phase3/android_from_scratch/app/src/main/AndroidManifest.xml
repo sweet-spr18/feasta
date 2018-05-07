@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!-- LOCATIONS LISTING SCREEN -->
         <activity android:name=".LocationsListingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +39,17 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".EventsListingActivity"/>
+        </activity>
+
+        <!-- EVENT ADD SCREEN -->
+        <activity
+            android:name=".EventAddActivity"
+            android:parentActivityName=".EventsListingActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EventsListingActivity" />
         </activity>
 
 
