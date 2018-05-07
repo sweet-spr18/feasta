@@ -34,22 +34,28 @@ import java.util.Calendar;
 public class EventEditActivity extends AppCompatActivity {
 
     Toolbar mToolbar;
+
     private ImageButton selectImage;
     private EditText name;
     private EditText description;
-    private EditText room;
-    private Spinner location;
-    private Uri selectImageUri;
     private String Description;
+    private EditText room;
+
+    //Drop down building list
+    private Spinner location;
+
+    //Variables for image selection
+    private Uri selectImageUri;
     private static final int Gallery_Pick= 1;
     private String saveCurrDate, saveCurrTime, postRandomName;
 
+    //Time and Date picker variables
     private TextView mDisplayDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     private TextView mDisplayTime;
     private TimePickerDialog.OnTimeSetListener mTimeSetListener;
 
-
+    //Database variables
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference postImageRef;
 
@@ -59,6 +65,7 @@ public class EventEditActivity extends AppCompatActivity {
         setContentView(R.layout.activity_event_edit);
 
         postImageRef = database.getReference();
+
 
         mToolbar = (Toolbar) findViewById(R.id.eventEditToolbar);
         setSupportActionBar(mToolbar);
@@ -70,16 +77,12 @@ public class EventEditActivity extends AppCompatActivity {
         assert ab != null;
         ab.setDisplayHomeAsUpEnabled(true);
 
+        //Link layout view elements
         selectImage = (ImageButton) findViewById(R.id.select_image);
         name = (EditText) findViewById(R.id.event_name);
         description = (EditText) findViewById(R.id.event_description);
         location = (Spinner) findViewById(R.id.location);
         room = (EditText) findViewById(R.id.room);
-
-        ArrayAdapter<String> locationAdapter = new ArrayAdapter<String>(EventEditActivity.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.locations));
-        locationAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        location.setAdapter(locationAdapter);
 
         selectImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +91,13 @@ public class EventEditActivity extends AppCompatActivity {
             }
         });
 
+        //Set up Spinner for buildings drop down menu
+        ArrayAdapter<String> locationAdapter = new ArrayAdapter<String>(EventEditActivity.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.locations));
+        locationAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        location.setAdapter(locationAdapter);
+
+        //Date picker
         mDisplayDate = (TextView) findViewById(R.id.select_date);
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,7 +113,6 @@ public class EventEditActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
-
         mDateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -112,6 +121,7 @@ public class EventEditActivity extends AppCompatActivity {
             }
         };
 
+        //Time picker
         mDisplayTime = (TextView) findViewById(R.id.time_picker);
         mDisplayTime.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -137,13 +147,13 @@ public class EventEditActivity extends AppCompatActivity {
 
 
     }
+        //Get image from phone's gallery
         private void OpenGallery(){
         Intent galleryIntent = new Intent();
         galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
         galleryIntent.setType("image/*");
         startActivityForResult(galleryIntent, Gallery_Pick);
         }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -152,9 +162,25 @@ public class EventEditActivity extends AppCompatActivity {
             selectImageUri = data.getData();
             selectImage.setImageURI(selectImageUri);
         }
-
     }
 
+    //Check if post is valid, if not, return error toast
+    private boolean validatePostInfo(){
+        Description = description.getText().toString();
+
+        if (selectImageUri == null){
+            Toast.makeText(this, "Please select an image", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        else if (TextUtils.isEmpty(Description)){
+            Toast.makeText(this, "Please enter a short description about the event", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+        else {
+            ImageToFirebase();
+            return true;
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -174,24 +200,8 @@ public class EventEditActivity extends AppCompatActivity {
         return true;
     }
 
-    private boolean validatePostInfo(){
-        Description = description.getText().toString();
 
-        if (selectImageUri == null){
-            Toast.makeText(this, "Please select an image", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-        else if (TextUtils.isEmpty(Description)){
-            Toast.makeText(this, "Please enter a short description about the event", Toast.LENGTH_SHORT).show();
-            return false;
-        }
-        else {
-            ImageToFirebase();
-            return true;
-        }
-    }
-
-    //-----NEEDS WORK---- USED THIS LINK BUT CAN'T GET HIS IMPORTS --- https://www.youtube.com/watch?v=N3npOixl9fk
+    //TODO:-----NEEDS WORK---- USED THIS LINK BUT CAN'T GET HIS IMPORTS --- https://www.youtube.com/watch?v=N3npOixl9fk
     private void ImageToFirebase(){
         Calendar callForDate = Calendar.getInstance();
         SimpleDateFormat currentDate = new SimpleDateFormat("dd-MMMM-yyyy");
@@ -212,7 +222,7 @@ public class EventEditActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_publish:
-                //---TRIED TO ADD TO EVENT LISTINGS PAGE HERE USING FIREBASE METHODS ABOVE.
+                //If post is valid, publish
                 if (validatePostInfo()) {
                     Toast.makeText(EventEditActivity.this, "Your event has been published", Toast.LENGTH_LONG).show();
                     Intent backToEventsList =
