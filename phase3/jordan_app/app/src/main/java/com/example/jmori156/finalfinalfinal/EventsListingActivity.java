@@ -1,8 +1,10 @@
 package com.example.jmori156.finalfinalfinal;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -22,6 +25,7 @@ public class EventsListingActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private EventsListingAdapter mAdapter;
     private ArrayList<Event> eventArrayList;
+    private FirebaseAuth firebaseAuth;
 
 
     @Override
@@ -32,12 +36,15 @@ public class EventsListingActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.eventsListingToolbar);
         setSupportActionBar(mToolbar);
 
+
         /* Get a support ActionBar corresponding to this toolbar */
         ActionBar ab = getSupportActionBar();
 
         /* Enable the Up button */
         assert ab != null;
         ab.setDisplayHomeAsUpEnabled(true);
+
+        firebaseAuth = firebaseAuth.getInstance();
 
         eventArrayList = new ArrayList<>();
         eventArrayList.add(new Event("event1", "org1", "DAC 409", "1:50 PM - 3:15 PM", "Pizza", 3, null));
@@ -89,11 +96,38 @@ public class EventsListingActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_logout:
-                //TODO: make a popup message asking "Do you want to log out?" "Yes" "No"
-                //TODO: then log out or come back to the current screen
+                showAlert();
+                return true;
 
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void showAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder
+                .setTitle("Logout")
+                .setMessage("Are you sure you want to logout?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface dialog, int id)
+                    {
+                        dialog.cancel();
+                        firebaseAuth.signOut();
+                        finish();
+                        startActivity(new Intent(EventsListingActivity.this, MainActivity.class));
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener()
+                {
+                    public void onClick(DialogInterface dialog, int id)
+                    {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }

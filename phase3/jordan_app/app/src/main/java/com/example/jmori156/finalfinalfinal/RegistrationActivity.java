@@ -46,7 +46,6 @@ public class RegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Toast.makeText(RegistrationActivity.this, "lol1123", Toast.LENGTH_LONG).show();
                 if(validate()){
 
                     ///Upload data to the database
@@ -60,7 +59,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 sendEmailVerification();
                                 sendUserData();
-                                Toast.makeText(RegistrationActivity.this, "it worked", Toast.LENGTH_LONG).show();
+                                Toast.makeText(RegistrationActivity.this, "Voila!! Now Let's Go Eat", Toast.LENGTH_LONG).show();
                                 startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
                                finish();
                             }

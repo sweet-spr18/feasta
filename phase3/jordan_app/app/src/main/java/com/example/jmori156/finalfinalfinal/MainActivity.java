@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
             startActivity(new Intent(MainActivity.this, SecondActivity.class));
         }
-        // Intent that brings user to reset password page after clicking the link
+        // Intent that brings user to reset password page after clicking the  forgot password link
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,11 +116,11 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser firebaseUser = firebaseAuth.getInstance().getCurrentUser();
         Boolean emailCheck = firebaseUser.isEmailVerified();
 
-        startActivity(new Intent(MainActivity.this, SecondActivity.class));
+        startActivity(new Intent(MainActivity.this, LocationsListingActivity.class));
 
         if(emailCheck){
             finish();
-            startActivity(new Intent(MainActivity.this, SecondActivity.class));
+            startActivity(new Intent(MainActivity.this, LocationsListingActivity.class));
         }else{
             Toast.makeText(this, "Please Verify Your Email", Toast.LENGTH_SHORT).show();
             firebaseAuth.signOut();

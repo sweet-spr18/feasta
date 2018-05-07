@@ -10,6 +10,7 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+
 public class SecondActivity extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;

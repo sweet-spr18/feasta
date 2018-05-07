@@ -1,61 +1,90 @@
 package com.example.jmori156.finalfinalfinal;
 
-
 import java.util.ArrayList;
 
 public class Location {
-    private int locationId;
+    //private int locationId;
 
-    private int image;
-    private String title;
+    private int imageResID;
+    private String name;
 
     private ArrayList<Event> events;
 
-    public Location(int pos){
-        switch(pos) {
-            case 0: setImage(R.drawable.dac);
-                setTitle("DAC");
+    public Location(String nm) {
+        this.name = nm;
+        switch (name) {
+            case "DAC":
+                setImageResID(R.drawable.dac);
                 break;
-            case 1: setImage(R.drawable.lib);
-                setTitle("LIB");
+            /*case "MAR":
+                setImageResID(R.drawable.mar);
+                break;*/
+            case "SJH":
+                setImageResID(R.drawable.sjh);
                 break;
-            case 2: setImage(R.drawable.sjh);
-                setTitle("SJH");
+            /*case "SUL":
+                setImageResID(R.drawable.sul);
+                break;*/
+            /*case "SAH":
+                setImageResID(R.drawable.sah);
+                break;*/
+            case "LIB":
+                setImageResID(R.drawable.lib);
                 break;
+            /*case "LAW":
+                setImageResID(R.drawable.law);
+                break;
+            case "BEN":
+                setImageResID(R.drawable.ben);
+                break;
+            case "CAR":
+                setImageResID(R.drawable.car);
+                break;
+            case "CCK":
+                setImageResID(R.drawable.cck);
+                break;
+            case "UC":
+                setImageResID(R.drawable.uc);
+                break;
+            case "Great Lawn":
+                setImageResID(R.drawable.great_lawn);
+                break;
+            case "President's Room":
+                setImageResID(R.drawable.presidents_room);
+                break;
+            case "Ozanam Lounge":
+                setImageResID(R.drawable.oz_lounge);
+                break;
+            case "Adminssions Welcome Ctr":
+                setImageResID(R.drawable.adm_welcome);
+                break;*/
         }
-    }
 
-    public String getName()
-    {
-        return title;
-    }
-
-    public int getImageResID()
-    {
-        return image;
-    }
-    public int getLocationId() {
+    /*public int getLocationId() {
         return locationId;
     }
 
     public void setLocationId(int locationId) {
         this.locationId = locationId;
+    }*/
+
+
     }
 
-    public int getImage() {
-        return image;
+    public int getImageResID() {
+        return imageResID;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setImageResID(int imageResID) {
+        this.imageResID = imageResID;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public ArrayList<Event> getEvents() {
@@ -65,4 +94,5 @@ public class Location {
     public void setEvents(ArrayList<Event> events) {
         this.events = events;
     }
+
 }
