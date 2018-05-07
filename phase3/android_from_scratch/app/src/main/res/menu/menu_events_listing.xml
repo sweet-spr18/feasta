@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- To select an event to edit -->
@@ -7,20 +8,24 @@
         android:id="@+id/action_edit"
         android:icon="@android:drawable/ic_menu_edit"
         android:name="@string/action_edit"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        tools:ignore="MenuTitle" />
 
     <!-- To create (add) a new event -->
     <item
         android:id="@+id/action_add"
         android:icon="@android:drawable/ic_menu_add"
         android:name="@string/action_add"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        tools:ignore="MenuTitle" />
 
     <!-- To log out -->
     <item
         android:id="@+id/action_logout"
         android:name="@string/action_logout"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
+        tools:ignore="MenuTitle" />
 
 
 
