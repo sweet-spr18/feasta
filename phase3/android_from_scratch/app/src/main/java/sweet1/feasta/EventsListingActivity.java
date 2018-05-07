@@ -82,9 +82,9 @@ public class EventsListingActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_add:
-                Intent editNewEvent =
-                        new Intent(getApplicationContext(), EventEditActivity.class);
-                startActivity(editNewEvent);
+                Intent addNewEvent =
+                        new Intent(getApplicationContext(), EventAddActivity.class);
+                startActivity(addNewEvent);
 
                 //NOT SURE HOW TO TIE IN THE OTHER CLASSES- CHELSEA
                 //eventArrayList.add(NewEvent);

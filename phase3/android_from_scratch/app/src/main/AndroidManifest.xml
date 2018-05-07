@@ -41,6 +41,17 @@
                 android:value=".EventsListingActivity" />
         </activity>
 
+        <!-- EVENT ADD SCREEN -->
+        <activity
+            android:name=".EventAddActivity"
+            android:parentActivityName=".EventsListingActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EventsListingActivity" />
+        </activity>
+
 
     </application>
 
