@@ -1,19 +1,27 @@
 package sweet1.feasta;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.text.format.DateFormat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -35,6 +43,11 @@ public class EventEditActivity extends AppCompatActivity {
     private String Description;
     private static final int Gallery_Pick= 1;
     private String saveCurrDate, saveCurrTime, postRandomName;
+
+    private TextView mDisplayDate;
+    private DatePickerDialog.OnDateSetListener mDateSetListener;
+    private TextView mDisplayTime;
+    private TimePickerDialog.OnTimeSetListener mTimeSetListener;
 
 
     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -74,6 +87,55 @@ public class EventEditActivity extends AppCompatActivity {
                 OpenGallery();
             }
         });
+
+        mDisplayDate = (TextView) findViewById(R.id.select_date);
+        mDisplayDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(EventEditActivity.this,
+                        android.R.style.Theme_Holo_Light_Dialog, mDateSetListener, year,month,day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+
+        mDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                String date = (month + "/" + dayOfMonth + "/" + year);
+                mDisplayDate.setText(date);
+            }
+        };
+
+        mDisplayTime = (TextView) findViewById(R.id.time_picker);
+        mDisplayTime.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Calendar cal = Calendar.getInstance();
+                int hour = cal.get(Calendar.HOUR_OF_DAY);
+                int min = cal.get(Calendar.MINUTE);
+
+                TimePickerDialog dialog = new TimePickerDialog(EventEditActivity.this,
+                        android.R.style.Theme_Holo_Light_Dialog, mTimeSetListener,
+                        hour, min, DateFormat.is24HourFormat(EventEditActivity.this));
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+        mTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                String time = (hourOfDay + ":" + minute);
+                mDisplayTime.setText(time);
+            }
+        };
+
+
     }
         private void OpenGallery(){
         Intent galleryIntent = new Intent();
@@ -112,17 +174,21 @@ public class EventEditActivity extends AppCompatActivity {
         return true;
     }
 
-    private void validatePostInfo(){
+    private boolean validatePostInfo(){
         Description = description.getText().toString();
 
         if (selectImageUri == null){
             Toast.makeText(this, "Please select an image", Toast.LENGTH_SHORT).show();
+            return false;
         }
         else if (TextUtils.isEmpty(Description)){
             Toast.makeText(this, "Please enter a short description about the event", Toast.LENGTH_SHORT).show();
+            return false;
         }
-        else
+        else {
             ImageToFirebase();
+            return true;
+        }
     }
 
     //-----NEEDS WORK---- USED THIS LINK BUT CAN'T GET HIS IMPORTS --- https://www.youtube.com/watch?v=N3npOixl9fk
@@ -147,12 +213,13 @@ public class EventEditActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_publish:
                 //---TRIED TO ADD TO EVENT LISTINGS PAGE HERE USING FIREBASE METHODS ABOVE.
-                validatePostInfo();
-                Toast.makeText(EventEditActivity.this, "Your event has been published", Toast.LENGTH_LONG).show();
-                Intent backToEventsList =
-                        new Intent(getApplicationContext(), EventsListingActivity.class);
-                startActivity(backToEventsList);
-                return true;
+                if (validatePostInfo()) {
+                    Toast.makeText(EventEditActivity.this, "Your event has been published", Toast.LENGTH_LONG).show();
+                    Intent backToEventsList =
+                            new Intent(getApplicationContext(), EventsListingActivity.class);
+                    startActivity(backToEventsList);
+                    return true;
+                }
 
             //TODO: add an image - either by taking a photo or select from pre-built gallery
             //TODO: if taking a photo, use Intent.ACTION_IMAGE_CAPTURE, as seen here:
