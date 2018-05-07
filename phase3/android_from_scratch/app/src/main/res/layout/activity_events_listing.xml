@@ -9,6 +9,8 @@
     tools:context=".EventsListingActivity">
 
     <!-- THE TOOLBAR -->
+
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/eventsListingToolbar"
         android:layout_width="match_parent"
@@ -17,10 +19,31 @@
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ToolbarTheme"
-        app:title="@string/app_name"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back" />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/Feasta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feasta" />
+
+    </android.support.v7.widget.Toolbar>
+
+
 
     <!-- THE LISTING -->
+
+
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"

@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -40,6 +42,14 @@ public class EventsListingActivity extends AppCompatActivity {
         /* Enable the Up button *//* //TODO: THIS WILL NEED TO GO TO THE LocationsListing SCREEN ONCE WE HAVE THAT
         assert ab != null;
         ab.setDisplayHomeAsUpEnabled(true);*/
+
+        Button button = findViewById(R.id.button3);
+        button.setOnClickListener
+                (new View.OnClickListener() {
+                            public void onClick(View v) {
+                                Intent goBack = new Intent(getApplicationContext(), LocationsListingActivity.class);
+                                startActivity(goBack); }
+                 });
 
         eventArrayList = new ArrayList<>();
         eventArrayList.add(new Event("event1", "org1", "DAC 409", "1:50 PM - 3:15 PM", "Pizza", 3, null));
